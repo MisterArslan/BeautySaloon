@@ -1,0 +1,8 @@
+C:\Users\Lionheart\Desktop\Дипломка\BeautySaloon\BeautySaloon\bin\Debug\BeautySaloon.exe
+C:\Users\Lionheart\Desktop\Дипломка\BeautySaloon\BeautySaloon\bin\Debug\BeautySaloon.pdb
+C:\Users\Lionheart\Desktop\Дипломка\BeautySaloon\BeautySaloon\obj\Debug\BeautySaloon.MainForm.resources
+C:\Users\Lionheart\Desktop\Дипломка\BeautySaloon\BeautySaloon\obj\Debug\BeautySaloon.Properties.Resources.resources
+C:\Users\Lionheart\Desktop\Дипломка\BeautySaloon\BeautySaloon\obj\Debug\BeautySaloon.csproj.GenerateResource.cache
+C:\Users\Lionheart\Desktop\Дипломка\BeautySaloon\BeautySaloon\obj\Debug\BeautySaloon.csproj.CoreCompileInputs.cache
+C:\Users\Lionheart\Desktop\Дипломка\BeautySaloon\BeautySaloon\obj\Debug\BeautySaloon.exe
+C:\Users\Lionheart\Desktop\Дипломка\BeautySaloon\BeautySaloon\obj\Debug\BeautySaloon.pdb
