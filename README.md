@@ -1,15 +1,15 @@
-# BeautySaloon
+п»ї# BeautySaloon
 MSSQLServer database with database management system on .NET windows forms
 
-# Необходимо для запуска
+# РќРµРѕР±С…РѕРґРёРјРѕ РґР»СЏ Р·Р°РїСѓСЃРєР°
 MS SQL Server
 MS SQL Server Management Studio
-Visual Studio и .NET 2.0 как минимум
+Visual Studio Рё .NET 2.0 РєР°Рє РјРёРЅРёРјСѓРј
 
-# Установка
-Запустите скрипт BeautySaloonCreate.sql. Для этого откройте MS SQL Server Management Studio, в нём выберите "Открыть файл"(Ctrl + O) -> найдите файл "BeautySaloonCreate.sql" и нажмите "Выполнить"(F5).
+# РЈСЃС‚Р°РЅРѕРІРєР°
+Р—Р°РїСѓСЃС‚РёС‚Рµ СЃРєСЂРёРїС‚ BeautySaloonCreate.sql. Р”Р»СЏ СЌС‚РѕРіРѕ РѕС‚РєСЂРѕР№С‚Рµ MS SQL Server Management Studio, РІ РЅС‘Рј РІС‹Р±РµСЂРёС‚Рµ "РћС‚РєСЂС‹С‚СЊ С„Р°Р№Р»"(Ctrl + O) -> РЅР°Р№РґРёС‚Рµ С„Р°Р№Р» "BeautySaloonCreate.sql" Рё РЅР°Р¶РјРёС‚Рµ "Р’С‹РїРѕР»РЅРёС‚СЊ"(F5).
 
-# Запуск
-Откройте папку BeautySaloon\BeautySaloon\bin\Debug и запустите файл BeautySaloon.exe.
-ИЛИ
-Откройте приложение BeautySaloon.sln в папке BeautySaloon; проект откроется в Visual Studio.
+# Р—Р°РїСѓСЃРє
+РћС‚РєСЂРѕР№С‚Рµ РїР°РїРєСѓ BeautySaloon\BeautySaloon\bin\Debug Рё Р·Р°РїСѓСЃС‚РёС‚Рµ С„Р°Р№Р» BeautySaloon.exe.
+РР›Р
+РћС‚РєСЂРѕР№С‚Рµ РїСЂРёР»РѕР¶РµРЅРёРµ BeautySaloon.sln РІ РїР°РїРєРµ BeautySaloon; РїСЂРѕРµРєС‚ РѕС‚РєСЂРѕРµС‚СЃСЏ РІ Visual Studio.
