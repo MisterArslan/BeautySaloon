@@ -195,6 +195,7 @@
             this.TabControl.Controls.Add(this.Shares);
             this.TabControl.Controls.Add(this.Discounts);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TabControl.Location = new System.Drawing.Point(0, 0);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
@@ -223,10 +224,10 @@
             this.Employees.Controls.Add(this.Employees_lastname_label);
             this.Employees.Controls.Add(this.Employees_name_label);
             this.Employees.Controls.Add(this.Employees_surname_label);
-            this.Employees.Location = new System.Drawing.Point(4, 25);
+            this.Employees.Location = new System.Drawing.Point(4, 29);
             this.Employees.Name = "Employees";
-            this.Employees.Padding = new System.Windows.Forms.Padding(3);
-            this.Employees.Size = new System.Drawing.Size(974, 724);
+            this.Employees.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Employees.Size = new System.Drawing.Size(974, 720);
             this.Employees.TabIndex = 0;
             this.Employees.Text = "Сотрудники";
             this.Employees.UseVisualStyleBackColor = true;
@@ -235,7 +236,7 @@
             // 
             this.Employees_employeeID.Enabled = false;
             this.Employees_employeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Employees_employeeID.Location = new System.Drawing.Point(634, 8);
+            this.Employees_employeeID.Location = new System.Drawing.Point(633, 8);
             this.Employees_employeeID.Name = "Employees_employeeID";
             this.Employees_employeeID.Size = new System.Drawing.Size(332, 27);
             this.Employees_employeeID.TabIndex = 1;
@@ -288,6 +289,8 @@
             this.Employees_dataGridView.AllowUserToAddRows = false;
             this.Employees_dataGridView.AllowUserToDeleteRows = false;
             this.Employees_dataGridView.AutoGenerateColumns = false;
+            this.Employees_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Employees_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Employees_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Employees_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.employeeIDDataGridViewTextBoxColumn,
@@ -312,48 +315,56 @@
             this.employeeIDDataGridViewTextBoxColumn.HeaderText = "employeeID";
             this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
             this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.employeeIDDataGridViewTextBoxColumn.Width = 126;
             // 
             // surnameDataGridViewTextBoxColumn
             // 
             this.surnameDataGridViewTextBoxColumn.DataPropertyName = "surname";
             this.surnameDataGridViewTextBoxColumn.HeaderText = "surname";
             this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.Width = 103;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 79;
             // 
             // lastnameDataGridViewTextBoxColumn
             // 
             this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "lastname";
             this.lastnameDataGridViewTextBoxColumn.HeaderText = "lastname";
             this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.Width = 106;
             // 
             // phonenumberDataGridViewTextBoxColumn
             // 
             this.phonenumberDataGridViewTextBoxColumn.DataPropertyName = "phone_number";
             this.phonenumberDataGridViewTextBoxColumn.HeaderText = "phone_number";
             this.phonenumberDataGridViewTextBoxColumn.Name = "phonenumberDataGridViewTextBoxColumn";
+            this.phonenumberDataGridViewTextBoxColumn.Width = 148;
             // 
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Width = 98;
             // 
             // specializationDataGridViewTextBoxColumn
             // 
             this.specializationDataGridViewTextBoxColumn.DataPropertyName = "specialization";
             this.specializationDataGridViewTextBoxColumn.HeaderText = "specialization";
             this.specializationDataGridViewTextBoxColumn.Name = "specializationDataGridViewTextBoxColumn";
+            this.specializationDataGridViewTextBoxColumn.Width = 140;
             // 
             // startdateDataGridViewTextBoxColumn
             // 
             this.startdateDataGridViewTextBoxColumn.DataPropertyName = "start_date";
             this.startdateDataGridViewTextBoxColumn.HeaderText = "start_date";
             this.startdateDataGridViewTextBoxColumn.Name = "startdateDataGridViewTextBoxColumn";
+            this.startdateDataGridViewTextBoxColumn.Width = 113;
             // 
             // employeesBindingSource
             // 
@@ -370,7 +381,7 @@
             this.Employees_startdate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Employees_startdate.Location = new System.Drawing.Point(633, 252);
             this.Employees_startdate.Name = "Employees_startdate";
-            this.Employees_startdate.Size = new System.Drawing.Size(332, 22);
+            this.Employees_startdate.Size = new System.Drawing.Size(332, 27);
             this.Employees_startdate.TabIndex = 8;
             // 
             // Employees_specialization
@@ -425,7 +436,7 @@
             // 
             this.Employees_startdate_label.AutoSize = true;
             this.Employees_startdate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Employees_startdate_label.Location = new System.Drawing.Point(443, 254);
+            this.Employees_startdate_label.Location = new System.Drawing.Point(443, 257);
             this.Employees_startdate_label.Name = "Employees_startdate_label";
             this.Employees_startdate_label.Size = new System.Drawing.Size(184, 20);
             this.Employees_startdate_label.TabIndex = 0;
@@ -505,10 +516,10 @@
             this.Services.Controls.Add(this.Services_comment_label);
             this.Services.Controls.Add(this.Services_price_label);
             this.Services.Controls.Add(this.Services_name_label);
-            this.Services.Location = new System.Drawing.Point(4, 25);
+            this.Services.Location = new System.Drawing.Point(4, 29);
             this.Services.Name = "Services";
-            this.Services.Padding = new System.Windows.Forms.Padding(3);
-            this.Services.Size = new System.Drawing.Size(974, 724);
+            this.Services.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Services.Size = new System.Drawing.Size(974, 720);
             this.Services.TabIndex = 1;
             this.Services.Text = "Услуги";
             this.Services.UseVisualStyleBackColor = true;
@@ -517,7 +528,7 @@
             // 
             this.Services_serviceID.Enabled = false;
             this.Services_serviceID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Services_serviceID.Location = new System.Drawing.Point(634, 8);
+            this.Services_serviceID.Location = new System.Drawing.Point(633, 8);
             this.Services_serviceID.Name = "Services_serviceID";
             this.Services_serviceID.Size = new System.Drawing.Size(332, 27);
             this.Services_serviceID.TabIndex = 1;
@@ -570,6 +581,8 @@
             this.Services_dataGridView.AllowUserToAddRows = false;
             this.Services_dataGridView.AllowUserToDeleteRows = false;
             this.Services_dataGridView.AutoGenerateColumns = false;
+            this.Services_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Services_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Services_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Services_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.serviceIDDataGridViewTextBoxColumn,
@@ -590,24 +603,28 @@
             this.serviceIDDataGridViewTextBoxColumn.HeaderText = "serviceID";
             this.serviceIDDataGridViewTextBoxColumn.Name = "serviceIDDataGridViewTextBoxColumn";
             this.serviceIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.serviceIDDataGridViewTextBoxColumn.Width = 109;
             // 
             // nameDataGridViewTextBoxColumn1
             // 
             this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
             this.nameDataGridViewTextBoxColumn1.HeaderText = "name";
             this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.Width = 79;
             // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 75;
             // 
             // commentDataGridViewTextBoxColumn
             // 
             this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
             this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
             this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.Width = 107;
             // 
             // servicesBindingSource
             // 
@@ -617,7 +634,7 @@
             // Services_comment
             // 
             this.Services_comment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Services_comment.Location = new System.Drawing.Point(634, 111);
+            this.Services_comment.Location = new System.Drawing.Point(633, 111);
             this.Services_comment.Multiline = true;
             this.Services_comment.Name = "Services_comment";
             this.Services_comment.Size = new System.Drawing.Size(332, 129);
@@ -626,7 +643,7 @@
             // Services_price
             // 
             this.Services_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Services_price.Location = new System.Drawing.Point(634, 76);
+            this.Services_price.Location = new System.Drawing.Point(633, 76);
             this.Services_price.Name = "Services_price";
             this.Services_price.Size = new System.Drawing.Size(332, 27);
             this.Services_price.TabIndex = 3;
@@ -634,7 +651,7 @@
             // Services_name
             // 
             this.Services_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Services_name.Location = new System.Drawing.Point(634, 41);
+            this.Services_name.Location = new System.Drawing.Point(633, 41);
             this.Services_name.Name = "Services_name";
             this.Services_name.Size = new System.Drawing.Size(332, 27);
             this.Services_name.TabIndex = 2;
@@ -643,7 +660,7 @@
             // 
             this.Services_comment_label.AutoSize = true;
             this.Services_comment_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Services_comment_label.Location = new System.Drawing.Point(504, 114);
+            this.Services_comment_label.Location = new System.Drawing.Point(503, 114);
             this.Services_comment_label.Name = "Services_comment_label";
             this.Services_comment_label.Size = new System.Drawing.Size(124, 20);
             this.Services_comment_label.TabIndex = 0;
@@ -683,10 +700,10 @@
             this.Clients.Controls.Add(this.Clients_phonenumber_label);
             this.Clients.Controls.Add(this.Clients_name_label);
             this.Clients.Controls.Add(this.Clients_surname_label);
-            this.Clients.Location = new System.Drawing.Point(4, 25);
+            this.Clients.Location = new System.Drawing.Point(4, 29);
             this.Clients.Name = "Clients";
-            this.Clients.Padding = new System.Windows.Forms.Padding(3);
-            this.Clients.Size = new System.Drawing.Size(974, 724);
+            this.Clients.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Clients.Size = new System.Drawing.Size(974, 720);
             this.Clients.TabIndex = 2;
             this.Clients.Text = "Клиенты";
             this.Clients.UseVisualStyleBackColor = true;
@@ -695,7 +712,7 @@
             // 
             this.Clients_clientID.Enabled = false;
             this.Clients_clientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clients_clientID.Location = new System.Drawing.Point(634, 8);
+            this.Clients_clientID.Location = new System.Drawing.Point(633, 8);
             this.Clients_clientID.Name = "Clients_clientID";
             this.Clients_clientID.Size = new System.Drawing.Size(332, 27);
             this.Clients_clientID.TabIndex = 1;
@@ -748,6 +765,8 @@
             this.Clients_dataGridView.AllowUserToAddRows = false;
             this.Clients_dataGridView.AllowUserToDeleteRows = false;
             this.Clients_dataGridView.AutoGenerateColumns = false;
+            this.Clients_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Clients_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Clients_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Clients_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clientIDDataGridViewTextBoxColumn,
@@ -768,24 +787,28 @@
             this.clientIDDataGridViewTextBoxColumn.HeaderText = "clientID";
             this.clientIDDataGridViewTextBoxColumn.Name = "clientIDDataGridViewTextBoxColumn";
             this.clientIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clientIDDataGridViewTextBoxColumn.Width = 95;
             // 
             // surnameDataGridViewTextBoxColumn1
             // 
             this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "surname";
             this.surnameDataGridViewTextBoxColumn1.HeaderText = "surname";
             this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
+            this.surnameDataGridViewTextBoxColumn1.Width = 103;
             // 
             // nameDataGridViewTextBoxColumn2
             // 
             this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
             this.nameDataGridViewTextBoxColumn2.HeaderText = "name";
             this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            this.nameDataGridViewTextBoxColumn2.Width = 79;
             // 
             // phonenumberDataGridViewTextBoxColumn1
             // 
             this.phonenumberDataGridViewTextBoxColumn1.DataPropertyName = "phone_number";
             this.phonenumberDataGridViewTextBoxColumn1.HeaderText = "phone_number";
             this.phonenumberDataGridViewTextBoxColumn1.Name = "phonenumberDataGridViewTextBoxColumn1";
+            this.phonenumberDataGridViewTextBoxColumn1.Width = 148;
             // 
             // clientsBindingSource
             // 
@@ -795,7 +818,7 @@
             // Clients_phonenumber
             // 
             this.Clients_phonenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clients_phonenumber.Location = new System.Drawing.Point(634, 111);
+            this.Clients_phonenumber.Location = new System.Drawing.Point(633, 111);
             this.Clients_phonenumber.Multiline = true;
             this.Clients_phonenumber.Name = "Clients_phonenumber";
             this.Clients_phonenumber.Size = new System.Drawing.Size(332, 27);
@@ -804,7 +827,7 @@
             // Clients_name
             // 
             this.Clients_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clients_name.Location = new System.Drawing.Point(634, 76);
+            this.Clients_name.Location = new System.Drawing.Point(633, 76);
             this.Clients_name.Name = "Clients_name";
             this.Clients_name.Size = new System.Drawing.Size(332, 27);
             this.Clients_name.TabIndex = 3;
@@ -812,7 +835,7 @@
             // Clients_surname
             // 
             this.Clients_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clients_surname.Location = new System.Drawing.Point(634, 41);
+            this.Clients_surname.Location = new System.Drawing.Point(633, 41);
             this.Clients_surname.Name = "Clients_surname";
             this.Clients_surname.Size = new System.Drawing.Size(332, 27);
             this.Clients_surname.TabIndex = 2;
@@ -865,10 +888,10 @@
             this.Records.Controls.Add(this.Records_serviceid_label);
             this.Records.Controls.Add(this.Records_employeeID_label);
             this.Records.Controls.Add(this.Records_clientID_label);
-            this.Records.Location = new System.Drawing.Point(4, 25);
+            this.Records.Location = new System.Drawing.Point(4, 29);
             this.Records.Name = "Records";
-            this.Records.Padding = new System.Windows.Forms.Padding(3);
-            this.Records.Size = new System.Drawing.Size(974, 724);
+            this.Records.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Records.Size = new System.Drawing.Size(974, 720);
             this.Records.TabIndex = 3;
             this.Records.Text = "Записи";
             this.Records.UseVisualStyleBackColor = true;
@@ -877,7 +900,7 @@
             // 
             this.Records_recordID.Enabled = false;
             this.Records_recordID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_recordID.Location = new System.Drawing.Point(634, 8);
+            this.Records_recordID.Location = new System.Drawing.Point(633, 8);
             this.Records_recordID.Name = "Records_recordID";
             this.Records_recordID.Size = new System.Drawing.Size(332, 27);
             this.Records_recordID.TabIndex = 1;
@@ -886,7 +909,7 @@
             // 
             this.Records_recordID_label.AutoSize = true;
             this.Records_recordID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_recordID_label.Location = new System.Drawing.Point(523, 11);
+            this.Records_recordID_label.Location = new System.Drawing.Point(522, 11);
             this.Records_recordID_label.Name = "Records_recordID_label";
             this.Records_recordID_label.Size = new System.Drawing.Size(105, 20);
             this.Records_recordID_label.TabIndex = 0;
@@ -916,9 +939,9 @@
             // Records_datetime
             // 
             this.Records_datetime.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_datetime.Location = new System.Drawing.Point(634, 147);
+            this.Records_datetime.Location = new System.Drawing.Point(633, 147);
             this.Records_datetime.Name = "Records_datetime";
-            this.Records_datetime.Size = new System.Drawing.Size(332, 22);
+            this.Records_datetime.Size = new System.Drawing.Size(332, 27);
             this.Records_datetime.TabIndex = 5;
             // 
             // Records_accept_button
@@ -938,6 +961,8 @@
             this.Records_dataGridView.AllowUserToAddRows = false;
             this.Records_dataGridView.AllowUserToDeleteRows = false;
             this.Records_dataGridView.AutoGenerateColumns = false;
+            this.Records_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Records_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Records_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Records_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.recordIDDataGridViewTextBoxColumn,
@@ -961,6 +986,7 @@
             this.recordIDDataGridViewTextBoxColumn.HeaderText = "recordID";
             this.recordIDDataGridViewTextBoxColumn.Name = "recordIDDataGridViewTextBoxColumn";
             this.recordIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.recordIDDataGridViewTextBoxColumn.Width = 103;
             // 
             // clientidDataGridViewTextBoxColumn1
             // 
@@ -973,30 +999,35 @@
             this.employeeidDataGridViewTextBoxColumn1.DataPropertyName = "employee_id";
             this.employeeidDataGridViewTextBoxColumn1.HeaderText = "employee_id";
             this.employeeidDataGridViewTextBoxColumn1.Name = "employeeidDataGridViewTextBoxColumn1";
+            this.employeeidDataGridViewTextBoxColumn1.Width = 131;
             // 
             // serviceidDataGridViewTextBoxColumn1
             // 
             this.serviceidDataGridViewTextBoxColumn1.DataPropertyName = "service_id";
             this.serviceidDataGridViewTextBoxColumn1.HeaderText = "service_id";
             this.serviceidDataGridViewTextBoxColumn1.Name = "serviceidDataGridViewTextBoxColumn1";
+            this.serviceidDataGridViewTextBoxColumn1.Width = 114;
             // 
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
             this.dateDataGridViewTextBoxColumn.HeaderText = "date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.Width = 70;
             // 
             // timeDataGridViewTextBoxColumn
             // 
             this.timeDataGridViewTextBoxColumn.DataPropertyName = "time";
             this.timeDataGridViewTextBoxColumn.HeaderText = "time";
             this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.Width = 70;
             // 
             // commentDataGridViewTextBoxColumn1
             // 
             this.commentDataGridViewTextBoxColumn1.DataPropertyName = "comment";
             this.commentDataGridViewTextBoxColumn1.HeaderText = "comment";
             this.commentDataGridViewTextBoxColumn1.Name = "commentDataGridViewTextBoxColumn1";
+            this.commentDataGridViewTextBoxColumn1.Width = 107;
             // 
             // recordsBindingSource
             // 
@@ -1006,16 +1037,16 @@
             // Records_comment
             // 
             this.Records_comment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_comment.Location = new System.Drawing.Point(635, 178);
+            this.Records_comment.Location = new System.Drawing.Point(633, 182);
             this.Records_comment.Multiline = true;
             this.Records_comment.Name = "Records_comment";
-            this.Records_comment.Size = new System.Drawing.Size(332, 94);
+            this.Records_comment.Size = new System.Drawing.Size(333, 94);
             this.Records_comment.TabIndex = 6;
             // 
             // Records_serviceID
             // 
             this.Records_serviceID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_serviceID.Location = new System.Drawing.Point(634, 111);
+            this.Records_serviceID.Location = new System.Drawing.Point(633, 111);
             this.Records_serviceID.Name = "Records_serviceID";
             this.Records_serviceID.Size = new System.Drawing.Size(332, 27);
             this.Records_serviceID.TabIndex = 4;
@@ -1023,7 +1054,7 @@
             // Records_employeeID
             // 
             this.Records_employeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_employeeID.Location = new System.Drawing.Point(634, 76);
+            this.Records_employeeID.Location = new System.Drawing.Point(633, 76);
             this.Records_employeeID.Name = "Records_employeeID";
             this.Records_employeeID.Size = new System.Drawing.Size(332, 27);
             this.Records_employeeID.TabIndex = 3;
@@ -1031,7 +1062,7 @@
             // Records_clientID
             // 
             this.Records_clientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_clientID.Location = new System.Drawing.Point(634, 41);
+            this.Records_clientID.Location = new System.Drawing.Point(633, 41);
             this.Records_clientID.Name = "Records_clientID";
             this.Records_clientID.Size = new System.Drawing.Size(332, 27);
             this.Records_clientID.TabIndex = 2;
@@ -1040,7 +1071,7 @@
             // 
             this.Records_comment_label.AutoSize = true;
             this.Records_comment_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_comment_label.Location = new System.Drawing.Point(505, 181);
+            this.Records_comment_label.Location = new System.Drawing.Point(503, 185);
             this.Records_comment_label.Name = "Records_comment_label";
             this.Records_comment_label.Size = new System.Drawing.Size(124, 20);
             this.Records_comment_label.TabIndex = 0;
@@ -1050,7 +1081,7 @@
             // 
             this.Records_datetime_label.AutoSize = true;
             this.Records_datetime_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_datetime_label.Location = new System.Drawing.Point(504, 149);
+            this.Records_datetime_label.Location = new System.Drawing.Point(503, 152);
             this.Records_datetime_label.Name = "Records_datetime_label";
             this.Records_datetime_label.Size = new System.Drawing.Size(124, 20);
             this.Records_datetime_label.TabIndex = 0;
@@ -1060,7 +1091,7 @@
             // 
             this.Records_serviceid_label.AutoSize = true;
             this.Records_serviceid_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_serviceid_label.Location = new System.Drawing.Point(528, 114);
+            this.Records_serviceid_label.Location = new System.Drawing.Point(527, 114);
             this.Records_serviceid_label.Name = "Records_serviceid_label";
             this.Records_serviceid_label.Size = new System.Drawing.Size(100, 20);
             this.Records_serviceid_label.TabIndex = 0;
@@ -1070,7 +1101,7 @@
             // 
             this.Records_employeeID_label.AutoSize = true;
             this.Records_employeeID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_employeeID_label.Location = new System.Drawing.Point(483, 79);
+            this.Records_employeeID_label.Location = new System.Drawing.Point(482, 79);
             this.Records_employeeID_label.Name = "Records_employeeID_label";
             this.Records_employeeID_label.Size = new System.Drawing.Size(145, 20);
             this.Records_employeeID_label.TabIndex = 0;
@@ -1080,7 +1111,7 @@
             // 
             this.Records_clientID_label.AutoSize = true;
             this.Records_clientID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_clientID_label.Location = new System.Drawing.Point(512, 44);
+            this.Records_clientID_label.Location = new System.Drawing.Point(511, 44);
             this.Records_clientID_label.Name = "Records_clientID_label";
             this.Records_clientID_label.Size = new System.Drawing.Size(116, 20);
             this.Records_clientID_label.TabIndex = 0;
@@ -1100,10 +1131,10 @@
             this.Shares.Controls.Add(this.Shares_expirationdate_label);
             this.Shares.Controls.Add(this.Shares_startdate_label);
             this.Shares.Controls.Add(this.Shares_name_label);
-            this.Shares.Location = new System.Drawing.Point(4, 25);
+            this.Shares.Location = new System.Drawing.Point(4, 29);
             this.Shares.Name = "Shares";
-            this.Shares.Padding = new System.Windows.Forms.Padding(3);
-            this.Shares.Size = new System.Drawing.Size(974, 724);
+            this.Shares.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Shares.Size = new System.Drawing.Size(974, 720);
             this.Shares.TabIndex = 4;
             this.Shares.Text = "Акции";
             this.Shares.UseVisualStyleBackColor = true;
@@ -1112,7 +1143,7 @@
             // 
             this.Shares_shareID.Enabled = false;
             this.Shares_shareID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_shareID.Location = new System.Drawing.Point(634, 8);
+            this.Shares_shareID.Location = new System.Drawing.Point(633, 8);
             this.Shares_shareID.Name = "Shares_shareID";
             this.Shares_shareID.Size = new System.Drawing.Size(332, 27);
             this.Shares_shareID.TabIndex = 1;
@@ -1121,7 +1152,7 @@
             // 
             this.Shares_shareID_label.AutoSize = true;
             this.Shares_shareID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_shareID_label.Location = new System.Drawing.Point(532, 11);
+            this.Shares_shareID_label.Location = new System.Drawing.Point(531, 11);
             this.Shares_shareID_label.Name = "Shares_shareID_label";
             this.Shares_shareID_label.Size = new System.Drawing.Size(96, 20);
             this.Shares_shareID_label.TabIndex = 0;
@@ -1151,17 +1182,17 @@
             // Shares_expirationdate
             // 
             this.Shares_expirationdate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_expirationdate.Location = new System.Drawing.Point(634, 112);
+            this.Shares_expirationdate.Location = new System.Drawing.Point(633, 112);
             this.Shares_expirationdate.Name = "Shares_expirationdate";
-            this.Shares_expirationdate.Size = new System.Drawing.Size(332, 22);
+            this.Shares_expirationdate.Size = new System.Drawing.Size(332, 27);
             this.Shares_expirationdate.TabIndex = 4;
             // 
             // Shares_startdate
             // 
             this.Shares_startdate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_startdate.Location = new System.Drawing.Point(634, 77);
+            this.Shares_startdate.Location = new System.Drawing.Point(633, 77);
             this.Shares_startdate.Name = "Shares_startdate";
-            this.Shares_startdate.Size = new System.Drawing.Size(332, 22);
+            this.Shares_startdate.Size = new System.Drawing.Size(332, 27);
             this.Shares_startdate.TabIndex = 3;
             // 
             // Shares_accept_button
@@ -1181,6 +1212,8 @@
             this.Shares_dataGridView.AllowUserToAddRows = false;
             this.Shares_dataGridView.AllowUserToDeleteRows = false;
             this.Shares_dataGridView.AutoGenerateColumns = false;
+            this.Shares_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Shares_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Shares_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Shares_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.shareIDDataGridViewTextBoxColumn,
@@ -1201,24 +1234,28 @@
             this.shareIDDataGridViewTextBoxColumn.HeaderText = "shareID";
             this.shareIDDataGridViewTextBoxColumn.Name = "shareIDDataGridViewTextBoxColumn";
             this.shareIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.shareIDDataGridViewTextBoxColumn.Width = 97;
             // 
             // nameDataGridViewTextBoxColumn3
             // 
             this.nameDataGridViewTextBoxColumn3.DataPropertyName = "name";
             this.nameDataGridViewTextBoxColumn3.HeaderText = "name";
             this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
+            this.nameDataGridViewTextBoxColumn3.Width = 79;
             // 
             // startdateDataGridViewTextBoxColumn1
             // 
             this.startdateDataGridViewTextBoxColumn1.DataPropertyName = "start_date";
             this.startdateDataGridViewTextBoxColumn1.HeaderText = "start_date";
             this.startdateDataGridViewTextBoxColumn1.Name = "startdateDataGridViewTextBoxColumn1";
+            this.startdateDataGridViewTextBoxColumn1.Width = 113;
             // 
             // expirationdateDataGridViewTextBoxColumn
             // 
             this.expirationdateDataGridViewTextBoxColumn.DataPropertyName = "expiration_date";
             this.expirationdateDataGridViewTextBoxColumn.HeaderText = "expiration_date";
             this.expirationdateDataGridViewTextBoxColumn.Name = "expirationdateDataGridViewTextBoxColumn";
+            this.expirationdateDataGridViewTextBoxColumn.Width = 151;
             // 
             // sharesBindingSource
             // 
@@ -1228,7 +1265,7 @@
             // Shares_name
             // 
             this.Shares_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_name.Location = new System.Drawing.Point(634, 41);
+            this.Shares_name.Location = new System.Drawing.Point(633, 41);
             this.Shares_name.Name = "Shares_name";
             this.Shares_name.Size = new System.Drawing.Size(332, 27);
             this.Shares_name.TabIndex = 2;
@@ -1237,7 +1274,7 @@
             // 
             this.Shares_expirationdate_label.AutoSize = true;
             this.Shares_expirationdate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_expirationdate_label.Location = new System.Drawing.Point(482, 114);
+            this.Shares_expirationdate_label.Location = new System.Drawing.Point(481, 114);
             this.Shares_expirationdate_label.Name = "Shares_expirationdate_label";
             this.Shares_expirationdate_label.Size = new System.Drawing.Size(146, 20);
             this.Shares_expirationdate_label.TabIndex = 0;
@@ -1247,7 +1284,7 @@
             // 
             this.Shares_startdate_label.AutoSize = true;
             this.Shares_startdate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_startdate_label.Location = new System.Drawing.Point(511, 79);
+            this.Shares_startdate_label.Location = new System.Drawing.Point(510, 79);
             this.Shares_startdate_label.Name = "Shares_startdate_label";
             this.Shares_startdate_label.Size = new System.Drawing.Size(117, 20);
             this.Shares_startdate_label.TabIndex = 0;
@@ -1257,7 +1294,7 @@
             // 
             this.Shares_name_label.AutoSize = true;
             this.Shares_name_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_name_label.Location = new System.Drawing.Point(494, 44);
+            this.Shares_name_label.Location = new System.Drawing.Point(493, 44);
             this.Shares_name_label.Name = "Shares_name_label";
             this.Shares_name_label.Size = new System.Drawing.Size(134, 20);
             this.Shares_name_label.TabIndex = 0;
@@ -1277,10 +1314,10 @@
             this.Discounts.Controls.Add(this.Discounts_value_label);
             this.Discounts.Controls.Add(this.Discounts_serviceID_label);
             this.Discounts.Controls.Add(this.Discounts_shareID_label);
-            this.Discounts.Location = new System.Drawing.Point(4, 25);
+            this.Discounts.Location = new System.Drawing.Point(4, 29);
             this.Discounts.Name = "Discounts";
-            this.Discounts.Padding = new System.Windows.Forms.Padding(3);
-            this.Discounts.Size = new System.Drawing.Size(974, 724);
+            this.Discounts.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Discounts.Size = new System.Drawing.Size(974, 720);
             this.Discounts.TabIndex = 5;
             this.Discounts.Text = "Скидки";
             this.Discounts.UseVisualStyleBackColor = true;
@@ -1289,7 +1326,7 @@
             // 
             this.Discounts_discountID.Enabled = false;
             this.Discounts_discountID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_discountID.Location = new System.Drawing.Point(634, 8);
+            this.Discounts_discountID.Location = new System.Drawing.Point(633, 8);
             this.Discounts_discountID.Name = "Discounts_discountID";
             this.Discounts_discountID.Size = new System.Drawing.Size(332, 27);
             this.Discounts_discountID.TabIndex = 1;
@@ -1298,7 +1335,7 @@
             // 
             this.Discounts_discountID_label.AutoSize = true;
             this.Discounts_discountID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_discountID_label.Location = new System.Drawing.Point(522, 11);
+            this.Discounts_discountID_label.Location = new System.Drawing.Point(521, 11);
             this.Discounts_discountID_label.Name = "Discounts_discountID_label";
             this.Discounts_discountID_label.Size = new System.Drawing.Size(106, 20);
             this.Discounts_discountID_label.TabIndex = 0;
@@ -1342,6 +1379,8 @@
             this.Discounts_dataGridView.AllowUserToAddRows = false;
             this.Discounts_dataGridView.AllowUserToDeleteRows = false;
             this.Discounts_dataGridView.AutoGenerateColumns = false;
+            this.Discounts_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Discounts_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Discounts_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Discounts_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.discountIDDataGridViewTextBoxColumn,
@@ -1362,24 +1401,28 @@
             this.discountIDDataGridViewTextBoxColumn.HeaderText = "discountID";
             this.discountIDDataGridViewTextBoxColumn.Name = "discountIDDataGridViewTextBoxColumn";
             this.discountIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.discountIDDataGridViewTextBoxColumn.Width = 118;
             // 
             // shareidDataGridViewTextBoxColumn1
             // 
             this.shareidDataGridViewTextBoxColumn1.DataPropertyName = "share_id";
             this.shareidDataGridViewTextBoxColumn1.HeaderText = "share_id";
             this.shareidDataGridViewTextBoxColumn1.Name = "shareidDataGridViewTextBoxColumn1";
+            this.shareidDataGridViewTextBoxColumn1.Width = 102;
             // 
             // serviceidDataGridViewTextBoxColumn2
             // 
             this.serviceidDataGridViewTextBoxColumn2.DataPropertyName = "service_id";
             this.serviceidDataGridViewTextBoxColumn2.HeaderText = "service_id";
             this.serviceidDataGridViewTextBoxColumn2.Name = "serviceidDataGridViewTextBoxColumn2";
+            this.serviceidDataGridViewTextBoxColumn2.Width = 114;
             // 
             // valueDataGridViewTextBoxColumn
             // 
             this.valueDataGridViewTextBoxColumn.DataPropertyName = "value";
             this.valueDataGridViewTextBoxColumn.HeaderText = "value";
             this.valueDataGridViewTextBoxColumn.Name = "valueDataGridViewTextBoxColumn";
+            this.valueDataGridViewTextBoxColumn.Width = 77;
             // 
             // discountsBindingSource
             // 
@@ -1389,7 +1432,7 @@
             // Discounts_value
             // 
             this.Discounts_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_value.Location = new System.Drawing.Point(634, 111);
+            this.Discounts_value.Location = new System.Drawing.Point(633, 111);
             this.Discounts_value.Multiline = true;
             this.Discounts_value.Name = "Discounts_value";
             this.Discounts_value.Size = new System.Drawing.Size(332, 27);
@@ -1398,7 +1441,7 @@
             // Discounts_serviceID
             // 
             this.Discounts_serviceID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_serviceID.Location = new System.Drawing.Point(634, 76);
+            this.Discounts_serviceID.Location = new System.Drawing.Point(633, 76);
             this.Discounts_serviceID.Name = "Discounts_serviceID";
             this.Discounts_serviceID.Size = new System.Drawing.Size(332, 27);
             this.Discounts_serviceID.TabIndex = 3;
@@ -1406,7 +1449,7 @@
             // Discounts_shareID
             // 
             this.Discounts_shareID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_shareID.Location = new System.Drawing.Point(634, 41);
+            this.Discounts_shareID.Location = new System.Drawing.Point(633, 41);
             this.Discounts_shareID.Name = "Discounts_shareID";
             this.Discounts_shareID.Size = new System.Drawing.Size(332, 27);
             this.Discounts_shareID.TabIndex = 2;
@@ -1415,7 +1458,7 @@
             // 
             this.Discounts_value_label.AutoSize = true;
             this.Discounts_value_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_value_label.Location = new System.Drawing.Point(473, 114);
+            this.Discounts_value_label.Location = new System.Drawing.Point(472, 114);
             this.Discounts_value_label.Name = "Discounts_value_label";
             this.Discounts_value_label.Size = new System.Drawing.Size(155, 20);
             this.Discounts_value_label.TabIndex = 0;
@@ -1425,7 +1468,7 @@
             // 
             this.Discounts_serviceID_label.AutoSize = true;
             this.Discounts_serviceID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_serviceID_label.Location = new System.Drawing.Point(528, 79);
+            this.Discounts_serviceID_label.Location = new System.Drawing.Point(527, 79);
             this.Discounts_serviceID_label.Name = "Discounts_serviceID_label";
             this.Discounts_serviceID_label.Size = new System.Drawing.Size(100, 20);
             this.Discounts_serviceID_label.TabIndex = 0;
@@ -1435,7 +1478,7 @@
             // 
             this.Discounts_shareID_label.AutoSize = true;
             this.Discounts_shareID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_shareID_label.Location = new System.Drawing.Point(532, 44);
+            this.Discounts_shareID_label.Location = new System.Drawing.Point(531, 44);
             this.Discounts_shareID_label.Name = "Discounts_shareID_label";
             this.Discounts_shareID_label.Size = new System.Drawing.Size(96, 20);
             this.Discounts_shareID_label.TabIndex = 0;
@@ -1475,7 +1518,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "СУБД \"Салон красоты\"";
+            this.Text = "Система Управления Базой Данных \"Салон красоты\"";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.TabControl.ResumeLayout(false);
             this.Employees.ResumeLayout(false);
@@ -1576,14 +1619,6 @@
         private beauty_saloonDataSet beauty_saloonDataSet;
         private System.Windows.Forms.BindingSource employeesBindingSource;
         private beauty_saloonDataSetTableAdapters.employeesTableAdapter employeesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specializationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource servicesBindingSource;
         private beauty_saloonDataSetTableAdapters.servicesTableAdapter servicesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn serviceIDDataGridViewTextBoxColumn;
@@ -1644,5 +1679,13 @@
         private System.Windows.Forms.Label Shares_shareID_label;
         private System.Windows.Forms.TextBox Discounts_discountID;
         private System.Windows.Forms.Label Discounts_discountID_label;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specializationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startdateDataGridViewTextBoxColumn;
     }
 }

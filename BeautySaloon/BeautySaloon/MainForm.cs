@@ -57,13 +57,7 @@ namespace BeautySaloon
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
-            // Обновляем таблицу
-            this.clientsTableAdapter.Fill(this.beauty_saloonDataSet.clients);
-            // Очищаем поля ввода
-            Clients_clientID.Clear();
-            Clients_surname.Clear();
-            Clients_name.Clear();
-            Clients_phonenumber.Clear();
+            Clients_Update();
         }
         private void Clients_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -80,6 +74,14 @@ namespace BeautySaloon
                     Clients_RemoveMode();
                     break;
             }
+        }
+        private void Clients_Update()
+        {
+            this.clientsTableAdapter.Fill(this.beauty_saloonDataSet.clients);
+            Clients_clientID.Clear();
+            Clients_surname.Clear();
+            Clients_name.Clear();
+            Clients_phonenumber.Clear();
         }
         private void Clients_AddMode()
         {
@@ -135,15 +137,7 @@ namespace BeautySaloon
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
-            // Обновляем таблицу
-            this.recordsTableAdapter.Fill(this.beauty_saloonDataSet.records);
-            // Очищаем поля ввода
-            Records_recordID.Clear();
-            Records_clientID.Clear();
-            Records_employeeID.Clear();
-            Records_serviceID.Clear();
-            Records_datetime.ResetText();
-            Records_comment.Clear();
+            Records_Update();
         }
         private void Records_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -160,6 +154,16 @@ namespace BeautySaloon
                     Records_RemoveMode();
                     break;
             }
+        }
+        private void Records_Update()
+        {
+            this.recordsTableAdapter.Fill(this.beauty_saloonDataSet.records);
+            Records_recordID.Clear();
+            Records_clientID.Clear();
+            Records_employeeID.Clear();
+            Records_serviceID.Clear();
+            Records_datetime.ResetText();
+            Records_comment.Clear();
         }
         private void Records_AddMode()
         {
@@ -219,13 +223,7 @@ namespace BeautySaloon
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
-            // Обновляем таблицу
-            this.sharesTableAdapter.Fill(this.beauty_saloonDataSet.shares);
-            // Очищаем поля ввода
-            Shares_shareID.Clear();
-            Shares_name.Clear();
-            Shares_startdate.ResetText();
-            Shares_expirationdate.ResetText();
+            Shares_Update();
         }
         private void Shares_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -242,6 +240,14 @@ namespace BeautySaloon
                     Shares_RemoveMode();
                     break;
             }
+        }
+        private void Shares_Update()
+        {
+            this.sharesTableAdapter.Fill(this.beauty_saloonDataSet.shares);
+            Shares_shareID.Clear();
+            Shares_name.Clear();
+            Shares_startdate.ResetText();
+            Shares_expirationdate.ResetText();
         }
         private void Shares_AddMode()
         {
@@ -296,13 +302,7 @@ namespace BeautySaloon
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
-            // Обновляем таблицу
-            this.discountsTableAdapter.Fill(this.beauty_saloonDataSet.discounts);
-            // Очищаем поля ввода
-            Discounts_discountID.Clear();
-            Discounts_shareID.Clear();
-            Discounts_serviceID.Clear();
-            Discounts_value.Clear();
+            Discounts_Update();
         }
         private void Discounts_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -319,6 +319,14 @@ namespace BeautySaloon
                     Discounts_RemoveMode();
                     break;
             }
+        }
+        private void Discounts_Update()
+        {
+            this.discountsTableAdapter.Fill(this.beauty_saloonDataSet.discounts);
+            Discounts_discountID.Clear();
+            Discounts_shareID.Clear();
+            Discounts_serviceID.Clear();
+            Discounts_value.Clear();
         }
         private void Discounts_AddMode()
         {
@@ -372,13 +380,7 @@ namespace BeautySaloon
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
-            // Обновляем таблицу
-            this.servicesTableAdapter.Fill(this.beauty_saloonDataSet.services);
-            // Очищаем поля ввода
-            Services_serviceID.Clear();
-            Services_name.Clear();
-            Services_price.Clear();
-            Services_comment.Clear();
+            Services_Update();
         }
         private void Services_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -395,6 +397,14 @@ namespace BeautySaloon
                     Services_RemoveMode();
                     break;
             }
+        }
+        private void Services_Update()
+        {
+            this.servicesTableAdapter.Fill(this.beauty_saloonDataSet.services);
+            Services_serviceID.Clear();
+            Services_name.Clear();
+            Services_price.Clear();
+            Services_comment.Clear();
         }
         private void Services_AddMode()
         {
@@ -450,17 +460,7 @@ namespace BeautySaloon
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
-            // Обновляем таблицу
-            this.employeesTableAdapter.Fill(this.beauty_saloonDataSet.employees);
-            // Очищаем поля ввода
-            Employees_employeeID.Clear();
-            Employees_surname.Clear();
-            Employees_name.Clear();
-            Employees_lastname.Clear();
-            Employees_number.Clear();
-            Employees_address.Clear();
-            Employees_specialization.Clear();
-            Employees_startdate.ResetText();
+            Employees_Update();
         }
         private void Employees_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -477,6 +477,18 @@ namespace BeautySaloon
                     Employees_RemoveMode();
                     break;
             }
+        }
+        private void Employees_Update()
+        {
+            this.employeesTableAdapter.Fill(this.beauty_saloonDataSet.employees);
+            Employees_employeeID.Clear();
+            Employees_surname.Clear();
+            Employees_name.Clear();
+            Employees_lastname.Clear();
+            Employees_number.Clear();
+            Employees_address.Clear();
+            Employees_specialization.Clear();
+            Employees_startdate.ResetText();
         }
         private void Employees_AddMode()
         {
@@ -513,11 +525,6 @@ namespace BeautySaloon
             Employees_address.Enabled = false;
             Employees_specialization.Enabled = false;
             Employees_startdate.Enabled = false;
-        }
-
-        public static T ParseEnum<T>(string value)
-        {
-            return (T)Enum.Parse(typeof(T), value, true);
         }
     }
 }

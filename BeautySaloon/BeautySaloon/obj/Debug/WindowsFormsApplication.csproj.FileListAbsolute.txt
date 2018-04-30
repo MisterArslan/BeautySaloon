@@ -7,4 +7,3 @@ C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Debug
 C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Debug\BeautySaloon.exe
 C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Debug\BeautySaloon.pdb
 C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\bin\Debug\BeautySaloon.exe.config
-C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Debug\WindowsFormsApplication.csprojResolveAssemblyReference.cache
