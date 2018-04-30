@@ -1,0 +1,10 @@
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\bin\Debug\MSSQLDatabase.dacpac
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\bin\Debug\MSSQLDatabase.dll
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\bin\Debug\MSSQLDatabase.pdb
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\obj\Debug\MSSQLDatabase.sqlprojResolveAssemblyReference.cache
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\obj\Debug\Model.xml
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\obj\Debug\refactor.xml
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\obj\Debug\postdeploy.sql
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\obj\Debug\predeploy.sql
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\obj\Debug\MSSQLDatabase.dll
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\MSSQLDatabase\obj\Debug\MSSQLDatabase.pdb
