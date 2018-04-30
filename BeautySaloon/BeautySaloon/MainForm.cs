@@ -11,7 +11,7 @@ namespace BeautySaloon
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, System.EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             // Заполняем таблицы данными из базы данных
             this.discountsTableAdapter.Fill(this.beauty_saloonDataSet.discounts);
@@ -21,30 +21,46 @@ namespace BeautySaloon
             this.servicesTableAdapter.Fill(this.beauty_saloonDataSet.services);
             this.employeesTableAdapter.Fill(this.beauty_saloonDataSet.employees);
             // 
-            this.Employees_mode.DataSource = Enum.GetValues(typeof(Enums.CRUDMode));
-            this.Services_mode.DataSource = Enum.GetValues(typeof(Enums.CRUDMode));
-            this.Clients_mode.DataSource = Enum.GetValues(typeof(Enums.CRUDMode));
-            this.Records_mode.DataSource = Enum.GetValues(typeof(Enums.CRUDMode));
-            this.Shares_mode.DataSource = Enum.GetValues(typeof(Enums.CRUDMode));
-            this.Discounts_mode.DataSource = Enum.GetValues(typeof(Enums.CRUDMode));
+            this.Employees_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
+            this.Services_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
+            this.Clients_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
+            this.Records_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
+            this.Shares_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
+            this.Discounts_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
         }
 
-        private void Clients_accept_button_Click(object sender, EventArgs e)
+        private void Clients_button_Click(object sender, EventArgs e)
         {
             // Добавление в базу данных
+            var button = sender as Button;
             try
             {
-                DataAcessObjects.Tables.Clients.Insert(Clients_surname.Text,
-                    Clients_name.Text, Clients_phonenumber.Text);
-                MessageBox.Show("Клиент успешно добавлен");
+                switch (Clients_mode.SelectedIndex)
+                {
+                    case (int)CRUDMode.Добавление:
+                        DataAcessObjects.Tables.Clients.Insert(Clients_surname.Text,
+                            Clients_name.Text, Clients_phonenumber.Text);
+                        MessageBox.Show("Клиент успешно добавлен");
+                        break;
+                    case (int)CRUDMode.Изменение:
+                        DataAcessObjects.Tables.Clients.Update(Convert.ToInt32(Clients_clientID.Text),
+                            Clients_surname.Text, Clients_name.Text, Clients_phonenumber.Text);
+                        MessageBox.Show("Клиент успешно обновлен");
+                        break;
+                    case (int)CRUDMode.Удаление:
+                        DataAcessObjects.Tables.Clients.Delete(Convert.ToInt32(Clients_clientID.Text));
+                        MessageBox.Show("Клиент успешно удален");
+                        break;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Concat("Во время добавления возникла ошибка:\n", ex.ToString()));
+                MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
             // Обновляем таблицу
             this.clientsTableAdapter.Fill(this.beauty_saloonDataSet.clients);
             // Очищаем поля ввода
+            Clients_clientID.Clear();
             Clients_surname.Clear();
             Clients_name.Clear();
             Clients_phonenumber.Clear();
@@ -67,7 +83,7 @@ namespace BeautySaloon
         }
         private void Clients_AddMode()
         {
-            Clients_accept_button.Text = ButtonType.Добавить.ToString();
+            Clients_button.Text = ButtonType.Добавить.ToString();
             Clients_clientID.Enabled = false;
             Clients_surname.Enabled = true;
             Clients_name.Enabled = true;
@@ -75,7 +91,7 @@ namespace BeautySaloon
         }
         private void Clients_ChangeMode()
         {
-            Clients_accept_button.Text = ButtonType.Изменить.ToString();
+            Clients_button.Text = ButtonType.Изменить.ToString();
             Clients_clientID.Enabled = true;
             Clients_surname.Enabled = true;
             Clients_name.Enabled = true;
@@ -83,7 +99,7 @@ namespace BeautySaloon
         }
         private void Clients_RemoveMode()
         {
-            Clients_accept_button.Text = ButtonType.Удалить.ToString();
+            Clients_button.Text = ButtonType.Удалить.ToString();
             Clients_clientID.Enabled = true;
             Clients_surname.Enabled = false;
             Clients_name.Enabled = false;
@@ -95,18 +111,34 @@ namespace BeautySaloon
             // Добавление в базу данных
             try
             {
-                DataAcessObjects.Tables.Records.Insert(Convert.ToInt32(Records_clientID.Text),
-                    Convert.ToInt32(Records_employeeID.Text), Convert.ToInt32(Records_serviceID.Text),
-                    Records_datetime.Value, Records_comment.Text);
-                MessageBox.Show("Запись успешно добавлена");
+                switch (Records_mode.SelectedIndex)
+                {
+                    case (int)CRUDMode.Добавление:
+                        DataAcessObjects.Tables.Records.Insert(Convert.ToInt32(Records_clientID.Text),
+                            Convert.ToInt32(Records_employeeID.Text), Convert.ToInt32(Records_serviceID.Text),
+                            Records_datetime.Value, Records_comment.Text);
+                        MessageBox.Show("Запись успешно добавлена");
+                        break;
+                    case (int)CRUDMode.Изменение:
+                        DataAcessObjects.Tables.Records.Update(Convert.ToInt32(Records_recordID.Text), 
+                            Convert.ToInt32(Records_clientID.Text), Convert.ToInt32(Records_employeeID.Text),
+                            Convert.ToInt32(Records_serviceID.Text), Records_datetime.Value, Records_comment.Text);
+                        MessageBox.Show("Запись успешно обновлена");
+                        break;
+                    case (int)CRUDMode.Удаление:
+                        DataAcessObjects.Tables.Records.Delete(Convert.ToInt32(Records_recordID.Text));
+                        MessageBox.Show("Запись успешно удалена");
+                        break;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Concat("Во время добавления возникла ошибка:\n", ex.ToString()));
+                MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
             // Обновляем таблицу
             this.recordsTableAdapter.Fill(this.beauty_saloonDataSet.records);
             // Очищаем поля ввода
+            Records_recordID.Clear();
             Records_clientID.Clear();
             Records_employeeID.Clear();
             Records_serviceID.Clear();
@@ -165,17 +197,32 @@ namespace BeautySaloon
             // Добавление в базу данных
             try
             {
-                DataAcessObjects.Tables.Shares.Insert(Shares_name.Text,
-                    Shares_startdate.Value, Shares_expirationdate.Value);
-                MessageBox.Show("Акция успешно добавлена");
+                switch (Shares_mode.SelectedIndex)
+                {
+                    case (int)CRUDMode.Добавление:
+                        DataAcessObjects.Tables.Shares.Insert(Shares_name.Text,
+                            Shares_startdate.Value, Shares_expirationdate.Value);
+                        MessageBox.Show("Акция успешно добавлена");
+                        break;
+                    case (int)CRUDMode.Изменение:
+                        DataAcessObjects.Tables.Shares.Update(Convert.ToInt32(Shares_shareID.Text),
+                            Shares_name.Text, Shares_startdate.Value, Shares_expirationdate.Value);
+                        MessageBox.Show("Акция успешно обновлена");
+                        break;
+                    case (int)CRUDMode.Удаление:
+                        DataAcessObjects.Tables.Shares.Delete(Convert.ToInt32(Shares_shareID.Text));
+                        MessageBox.Show("Акция успешно удалена");
+                        break;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Concat("Во время добавления возникла ошибка:\n", ex.ToString()));
+                MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
             // Обновляем таблицу
             this.sharesTableAdapter.Fill(this.beauty_saloonDataSet.shares);
             // Очищаем поля ввода
+            Shares_shareID.Clear();
             Shares_name.Clear();
             Shares_startdate.ResetText();
             Shares_expirationdate.ResetText();
@@ -226,17 +273,33 @@ namespace BeautySaloon
             // Добавление в базу данных
             try
             {
-                DataAcessObjects.Tables.Discounts.Insert(Convert.ToInt32(Discounts_shareID.Text),
-                    Convert.ToInt32(Discounts_serviceID.Text), Convert.ToInt32(Discounts_value.Text));
-                MessageBox.Show("Скидка успешно добавлена");
+                switch (Discounts_mode.SelectedIndex)
+                {
+                    case (int)CRUDMode.Добавление:
+                        DataAcessObjects.Tables.Discounts.Insert(Convert.ToInt32(Discounts_shareID.Text),
+                            Convert.ToInt32(Discounts_serviceID.Text), Convert.ToInt32(Discounts_value.Text));
+                        MessageBox.Show("Скидка успешно добавлена");
+                        break;
+                    case (int)CRUDMode.Изменение:
+                        DataAcessObjects.Tables.Discounts.Update(Convert.ToInt32(Discounts_discountID.Text),
+                            Convert.ToInt32(Discounts_shareID.Text), Convert.ToInt32(Discounts_serviceID.Text),
+                            Convert.ToInt32(Discounts_value.Text));
+                        MessageBox.Show("Скидка успешно обновлена");
+                        break;
+                    case (int)CRUDMode.Удаление:
+                        DataAcessObjects.Tables.Discounts.Delete(Convert.ToInt32(Discounts_discountID.Text));
+                        MessageBox.Show("Скидка успешно удалена");
+                        break;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Concat("Во время добавления возникла ошибка:\n", ex.ToString()));
+                MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
             // Обновляем таблицу
             this.discountsTableAdapter.Fill(this.beauty_saloonDataSet.discounts);
             // Очищаем поля ввода
+            Discounts_discountID.Clear();
             Discounts_shareID.Clear();
             Discounts_serviceID.Clear();
             Discounts_value.Clear();
@@ -287,17 +350,32 @@ namespace BeautySaloon
             // Добавление в базу данных
             try
             {
-                DataAcessObjects.Tables.Services.Insert(Services_name.Text,
-                    Convert.ToInt32(Services_price.Text), Services_comment.Text);
-                MessageBox.Show("Услуга успешно добавлена");
+                switch (Services_mode.SelectedIndex)
+                {
+                    case (int)CRUDMode.Добавление:
+                        DataAcessObjects.Tables.Services.Insert(Services_name.Text,
+                            Convert.ToInt32(Services_price.Text), Services_comment.Text);
+                        MessageBox.Show("Услуга успешно добавлена");
+                        break;
+                    case (int)CRUDMode.Изменение:
+                        DataAcessObjects.Tables.Services.Update(Convert.ToInt32(Services_serviceID.Text),
+                            Services_name.Text, Convert.ToInt32(Services_price.Text), Services_comment.Text);
+                        MessageBox.Show("Услуга успешно обновлена");
+                        break;
+                    case (int)CRUDMode.Удаление:
+                        DataAcessObjects.Tables.Services.Delete(Convert.ToInt32(Services_serviceID.Text));
+                        MessageBox.Show("Услуга успешно удалена");
+                        break;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Concat("Во время добавления возникла ошибка:\n", ex.ToString()));
+                MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
             // Обновляем таблицу
             this.servicesTableAdapter.Fill(this.beauty_saloonDataSet.services);
             // Очищаем поля ввода
+            Services_serviceID.Clear();
             Services_name.Clear();
             Services_price.Clear();
             Services_comment.Clear();
@@ -348,18 +426,34 @@ namespace BeautySaloon
             // Добавление в базу данных
             try
             {
-                DataAcessObjects.Tables.Employees.Insert(Employees_surname.Text,
-                    Employees_name.Text, Employees_lastname.Text, Employees_number.Text,
-                    Employees_address.Text, Employees_specialization.Text, Employees_startdate.Value);
-                MessageBox.Show("Сотрудник успешно добавлен");
+                switch (Employees_mode.SelectedIndex)
+                {
+                    case (int)CRUDMode.Добавление:
+                        DataAcessObjects.Tables.Employees.Insert(Employees_surname.Text,
+                            Employees_name.Text, Employees_lastname.Text, Employees_number.Text,
+                            Employees_address.Text, Employees_specialization.Text, Employees_startdate.Value);
+                        MessageBox.Show("Сотрудник успешно добавлен");
+                        break;
+                    case (int)CRUDMode.Изменение:
+                        DataAcessObjects.Tables.Employees.Update(Convert.ToInt32(Employees_employeeID.Text), 
+                            Employees_surname.Text, Employees_name.Text, Employees_lastname.Text, Employees_number.Text,
+                            Employees_address.Text, Employees_specialization.Text, Employees_startdate.Value);
+                        MessageBox.Show("Сотрудник успешно обновлен");
+                        break;
+                    case (int)CRUDMode.Удаление:
+                        DataAcessObjects.Tables.Employees.Delete(Convert.ToInt32(Employees_employeeID.Text));
+                        MessageBox.Show("Сотрудник успешно удален");
+                        break;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Concat("Во время добавления возникла ошибка:\n", ex.ToString()));
+                MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
             // Обновляем таблицу
             this.employeesTableAdapter.Fill(this.beauty_saloonDataSet.employees);
             // Очищаем поля ввода
+            Employees_employeeID.Clear();
             Employees_surname.Clear();
             Employees_name.Clear();
             Employees_lastname.Clear();
@@ -419,6 +513,11 @@ namespace BeautySaloon
             Employees_address.Enabled = false;
             Employees_specialization.Enabled = false;
             Employees_startdate.Enabled = false;
+        }
+
+        public static T ParseEnum<T>(string value)
+        {
+            return (T)Enum.Parse(typeof(T), value, true);
         }
     }
 }

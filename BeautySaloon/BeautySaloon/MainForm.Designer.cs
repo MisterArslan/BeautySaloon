@@ -80,9 +80,11 @@
             this.Services_price_label = new System.Windows.Forms.Label();
             this.Services_name_label = new System.Windows.Forms.Label();
             this.Clients = new System.Windows.Forms.TabPage();
+            this.Clients_clientID = new System.Windows.Forms.TextBox();
+            this.Clients_clientID_label = new System.Windows.Forms.Label();
             this.Clients_mode = new System.Windows.Forms.ComboBox();
             this.Clients_mode_label = new System.Windows.Forms.Label();
-            this.Clients_accept_button = new System.Windows.Forms.Button();
+            this.Clients_button = new System.Windows.Forms.Button();
             this.Clients_dataGridView = new System.Windows.Forms.DataGridView();
             this.clientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,6 +98,8 @@
             this.Clients_name_label = new System.Windows.Forms.Label();
             this.Clients_surname_label = new System.Windows.Forms.Label();
             this.Records = new System.Windows.Forms.TabPage();
+            this.Records_recordID = new System.Windows.Forms.TextBox();
+            this.Records_recordID_label = new System.Windows.Forms.Label();
             this.Records_mode = new System.Windows.Forms.ComboBox();
             this.Records_mode_label = new System.Windows.Forms.Label();
             this.Records_datetime = new System.Windows.Forms.DateTimePicker();
@@ -119,6 +123,8 @@
             this.Records_employeeID_label = new System.Windows.Forms.Label();
             this.Records_clientID_label = new System.Windows.Forms.Label();
             this.Shares = new System.Windows.Forms.TabPage();
+            this.Shares_shareID = new System.Windows.Forms.TextBox();
+            this.Shares_shareID_label = new System.Windows.Forms.Label();
             this.Shares_mode = new System.Windows.Forms.ComboBox();
             this.Shares_mode_label = new System.Windows.Forms.Label();
             this.Shares_expirationdate = new System.Windows.Forms.DateTimePicker();
@@ -135,6 +141,8 @@
             this.Shares_startdate_label = new System.Windows.Forms.Label();
             this.Shares_name_label = new System.Windows.Forms.Label();
             this.Discounts = new System.Windows.Forms.TabPage();
+            this.Discounts_discountID = new System.Windows.Forms.TextBox();
+            this.Discounts_discountID_label = new System.Windows.Forms.Label();
             this.Discounts_mode = new System.Windows.Forms.ComboBox();
             this.Discounts_mode_label = new System.Windows.Forms.Label();
             this.Discounts_accept_button = new System.Windows.Forms.Button();
@@ -156,14 +164,6 @@
             this.recordsTableAdapter = new BeautySaloon.beauty_saloonDataSetTableAdapters.recordsTableAdapter();
             this.sharesTableAdapter = new BeautySaloon.beauty_saloonDataSetTableAdapters.sharesTableAdapter();
             this.discountsTableAdapter = new BeautySaloon.beauty_saloonDataSetTableAdapters.discountsTableAdapter();
-            this.Clients_clientID = new System.Windows.Forms.TextBox();
-            this.Clients_clientID_label = new System.Windows.Forms.Label();
-            this.Records_recordID = new System.Windows.Forms.TextBox();
-            this.Records_recordID_label = new System.Windows.Forms.Label();
-            this.Shares_shareID = new System.Windows.Forms.TextBox();
-            this.Shares_shareID_label = new System.Windows.Forms.Label();
-            this.Discounts_discountID = new System.Windows.Forms.TextBox();
-            this.Discounts_discountID_label = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.Employees.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Employees_dataGridView)).BeginInit();
@@ -238,7 +238,7 @@
             this.Employees_employeeID.Location = new System.Drawing.Point(634, 8);
             this.Employees_employeeID.Name = "Employees_employeeID";
             this.Employees_employeeID.Size = new System.Drawing.Size(332, 27);
-            this.Employees_employeeID.TabIndex = 22;
+            this.Employees_employeeID.TabIndex = 1;
             // 
             // Employees_employeeID_label
             // 
@@ -247,17 +247,18 @@
             this.Employees_employeeID_label.Location = new System.Drawing.Point(482, 11);
             this.Employees_employeeID_label.Name = "Employees_employeeID_label";
             this.Employees_employeeID_label.Size = new System.Drawing.Size(145, 20);
-            this.Employees_employeeID_label.TabIndex = 21;
+            this.Employees_employeeID_label.TabIndex = 0;
             this.Employees_employeeID_label.Text = "Код сотрудника";
             // 
             // Employees_mode
             // 
+            this.Employees_mode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Employees_mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Employees_mode.FormattingEnabled = true;
             this.Employees_mode.Location = new System.Drawing.Point(6, 337);
             this.Employees_mode.Name = "Employees_mode";
             this.Employees_mode.Size = new System.Drawing.Size(186, 28);
-            this.Employees_mode.TabIndex = 20;
+            this.Employees_mode.TabIndex = 10;
             this.Employees_mode.SelectedIndexChanged += new System.EventHandler(this.Employees_mode_SelectedIndexChanged);
             // 
             // Employees_mode_label
@@ -267,7 +268,7 @@
             this.Employees_mode_label.Location = new System.Drawing.Point(2, 315);
             this.Employees_mode_label.Name = "Employees_mode_label";
             this.Employees_mode_label.Size = new System.Drawing.Size(64, 20);
-            this.Employees_mode_label.TabIndex = 19;
+            this.Employees_mode_label.TabIndex = 0;
             this.Employees_mode_label.Text = "Режим";
             // 
             // Employees_accept_button
@@ -277,7 +278,7 @@
             this.Employees_accept_button.Location = new System.Drawing.Point(766, 315);
             this.Employees_accept_button.Name = "Employees_accept_button";
             this.Employees_accept_button.Size = new System.Drawing.Size(200, 50);
-            this.Employees_accept_button.TabIndex = 16;
+            this.Employees_accept_button.TabIndex = 9;
             this.Employees_accept_button.Text = "Добавить";
             this.Employees_accept_button.UseVisualStyleBackColor = true;
             this.Employees_accept_button.Click += new System.EventHandler(this.Employees_accept_button_Click);
@@ -303,7 +304,7 @@
             this.Employees_dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Employees_dataGridView.RowTemplate.Height = 24;
             this.Employees_dataGridView.Size = new System.Drawing.Size(960, 346);
-            this.Employees_dataGridView.TabIndex = 15;
+            this.Employees_dataGridView.TabIndex = 0;
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 
@@ -370,7 +371,7 @@
             this.Employees_startdate.Location = new System.Drawing.Point(633, 252);
             this.Employees_startdate.Name = "Employees_startdate";
             this.Employees_startdate.Size = new System.Drawing.Size(332, 22);
-            this.Employees_startdate.TabIndex = 14;
+            this.Employees_startdate.TabIndex = 8;
             // 
             // Employees_specialization
             // 
@@ -378,7 +379,7 @@
             this.Employees_specialization.Location = new System.Drawing.Point(633, 216);
             this.Employees_specialization.Name = "Employees_specialization";
             this.Employees_specialization.Size = new System.Drawing.Size(332, 27);
-            this.Employees_specialization.TabIndex = 12;
+            this.Employees_specialization.TabIndex = 7;
             // 
             // Employees_address
             // 
@@ -386,7 +387,7 @@
             this.Employees_address.Location = new System.Drawing.Point(633, 181);
             this.Employees_address.Name = "Employees_address";
             this.Employees_address.Size = new System.Drawing.Size(332, 27);
-            this.Employees_address.TabIndex = 11;
+            this.Employees_address.TabIndex = 6;
             // 
             // Employees_number
             // 
@@ -394,7 +395,7 @@
             this.Employees_number.Location = new System.Drawing.Point(633, 146);
             this.Employees_number.Name = "Employees_number";
             this.Employees_number.Size = new System.Drawing.Size(332, 27);
-            this.Employees_number.TabIndex = 10;
+            this.Employees_number.TabIndex = 5;
             // 
             // Employees_lastname
             // 
@@ -402,7 +403,7 @@
             this.Employees_lastname.Location = new System.Drawing.Point(633, 111);
             this.Employees_lastname.Name = "Employees_lastname";
             this.Employees_lastname.Size = new System.Drawing.Size(332, 27);
-            this.Employees_lastname.TabIndex = 9;
+            this.Employees_lastname.TabIndex = 4;
             // 
             // Employees_name
             // 
@@ -410,7 +411,7 @@
             this.Employees_name.Location = new System.Drawing.Point(633, 76);
             this.Employees_name.Name = "Employees_name";
             this.Employees_name.Size = new System.Drawing.Size(332, 27);
-            this.Employees_name.TabIndex = 8;
+            this.Employees_name.TabIndex = 3;
             // 
             // Employees_surname
             // 
@@ -418,7 +419,7 @@
             this.Employees_surname.Location = new System.Drawing.Point(633, 41);
             this.Employees_surname.Name = "Employees_surname";
             this.Employees_surname.Size = new System.Drawing.Size(332, 27);
-            this.Employees_surname.TabIndex = 7;
+            this.Employees_surname.TabIndex = 2;
             // 
             // Employees_startdate_label
             // 
@@ -427,7 +428,7 @@
             this.Employees_startdate_label.Location = new System.Drawing.Point(443, 254);
             this.Employees_startdate_label.Name = "Employees_startdate_label";
             this.Employees_startdate_label.Size = new System.Drawing.Size(184, 20);
-            this.Employees_startdate_label.TabIndex = 6;
+            this.Employees_startdate_label.TabIndex = 0;
             this.Employees_startdate_label.Text = "Дата начала работы";
             // 
             // Employees_specialization_label
@@ -437,7 +438,7 @@
             this.Employees_specialization_label.Location = new System.Drawing.Point(487, 219);
             this.Employees_specialization_label.Name = "Employees_specialization_label";
             this.Employees_specialization_label.Size = new System.Drawing.Size(140, 20);
-            this.Employees_specialization_label.TabIndex = 5;
+            this.Employees_specialization_label.TabIndex = 0;
             this.Employees_specialization_label.Text = "Специализация";
             // 
             // Employees_address_label
@@ -447,7 +448,7 @@
             this.Employees_address_label.Location = new System.Drawing.Point(565, 184);
             this.Employees_address_label.Name = "Employees_address_label";
             this.Employees_address_label.Size = new System.Drawing.Size(62, 20);
-            this.Employees_address_label.TabIndex = 4;
+            this.Employees_address_label.TabIndex = 0;
             this.Employees_address_label.Text = "Адрес";
             // 
             // Employees_number_label
@@ -457,7 +458,7 @@
             this.Employees_number_label.Location = new System.Drawing.Point(472, 149);
             this.Employees_number_label.Name = "Employees_number_label";
             this.Employees_number_label.Size = new System.Drawing.Size(155, 20);
-            this.Employees_number_label.TabIndex = 3;
+            this.Employees_number_label.TabIndex = 0;
             this.Employees_number_label.Text = "Номер телефона";
             // 
             // Employees_lastname_label
@@ -467,7 +468,7 @@
             this.Employees_lastname_label.Location = new System.Drawing.Point(536, 114);
             this.Employees_lastname_label.Name = "Employees_lastname_label";
             this.Employees_lastname_label.Size = new System.Drawing.Size(91, 20);
-            this.Employees_lastname_label.TabIndex = 2;
+            this.Employees_lastname_label.TabIndex = 0;
             this.Employees_lastname_label.Text = "Отчество";
             // 
             // Employees_name_label
@@ -477,7 +478,7 @@
             this.Employees_name_label.Location = new System.Drawing.Point(585, 79);
             this.Employees_name_label.Name = "Employees_name_label";
             this.Employees_name_label.Size = new System.Drawing.Size(42, 20);
-            this.Employees_name_label.TabIndex = 1;
+            this.Employees_name_label.TabIndex = 0;
             this.Employees_name_label.Text = "Имя";
             // 
             // Employees_surname_label
@@ -519,7 +520,7 @@
             this.Services_serviceID.Location = new System.Drawing.Point(634, 8);
             this.Services_serviceID.Name = "Services_serviceID";
             this.Services_serviceID.Size = new System.Drawing.Size(332, 27);
-            this.Services_serviceID.TabIndex = 24;
+            this.Services_serviceID.TabIndex = 1;
             // 
             // Services_serviceID_label
             // 
@@ -528,17 +529,18 @@
             this.Services_serviceID_label.Location = new System.Drawing.Point(527, 11);
             this.Services_serviceID_label.Name = "Services_serviceID_label";
             this.Services_serviceID_label.Size = new System.Drawing.Size(100, 20);
-            this.Services_serviceID_label.TabIndex = 23;
+            this.Services_serviceID_label.TabIndex = 0;
             this.Services_serviceID_label.Text = "Код услуги";
             // 
             // Services_mode
             // 
+            this.Services_mode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Services_mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Services_mode.FormattingEnabled = true;
             this.Services_mode.Location = new System.Drawing.Point(6, 337);
             this.Services_mode.Name = "Services_mode";
             this.Services_mode.Size = new System.Drawing.Size(186, 28);
-            this.Services_mode.TabIndex = 22;
+            this.Services_mode.TabIndex = 6;
             this.Services_mode.SelectedIndexChanged += new System.EventHandler(this.Services_mode_SelectedIndexChanged);
             // 
             // Services_mode_label
@@ -548,7 +550,7 @@
             this.Services_mode_label.Location = new System.Drawing.Point(2, 315);
             this.Services_mode_label.Name = "Services_mode_label";
             this.Services_mode_label.Size = new System.Drawing.Size(64, 20);
-            this.Services_mode_label.TabIndex = 21;
+            this.Services_mode_label.TabIndex = 0;
             this.Services_mode_label.Text = "Режим";
             // 
             // Services_accept_button
@@ -558,7 +560,7 @@
             this.Services_accept_button.Location = new System.Drawing.Point(766, 315);
             this.Services_accept_button.Name = "Services_accept_button";
             this.Services_accept_button.Size = new System.Drawing.Size(200, 50);
-            this.Services_accept_button.TabIndex = 17;
+            this.Services_accept_button.TabIndex = 5;
             this.Services_accept_button.Text = "Добавить";
             this.Services_accept_button.UseVisualStyleBackColor = true;
             this.Services_accept_button.Click += new System.EventHandler(this.Services_accept_button_Click);
@@ -580,7 +582,7 @@
             this.Services_dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Services_dataGridView.RowTemplate.Height = 24;
             this.Services_dataGridView.Size = new System.Drawing.Size(960, 346);
-            this.Services_dataGridView.TabIndex = 16;
+            this.Services_dataGridView.TabIndex = 0;
             // 
             // serviceIDDataGridViewTextBoxColumn
             // 
@@ -619,7 +621,7 @@
             this.Services_comment.Multiline = true;
             this.Services_comment.Name = "Services_comment";
             this.Services_comment.Size = new System.Drawing.Size(332, 129);
-            this.Services_comment.TabIndex = 15;
+            this.Services_comment.TabIndex = 4;
             // 
             // Services_price
             // 
@@ -627,7 +629,7 @@
             this.Services_price.Location = new System.Drawing.Point(634, 76);
             this.Services_price.Name = "Services_price";
             this.Services_price.Size = new System.Drawing.Size(332, 27);
-            this.Services_price.TabIndex = 14;
+            this.Services_price.TabIndex = 3;
             // 
             // Services_name
             // 
@@ -635,7 +637,7 @@
             this.Services_name.Location = new System.Drawing.Point(634, 41);
             this.Services_name.Name = "Services_name";
             this.Services_name.Size = new System.Drawing.Size(332, 27);
-            this.Services_name.TabIndex = 13;
+            this.Services_name.TabIndex = 2;
             // 
             // Services_comment_label
             // 
@@ -644,7 +646,7 @@
             this.Services_comment_label.Location = new System.Drawing.Point(504, 114);
             this.Services_comment_label.Name = "Services_comment_label";
             this.Services_comment_label.Size = new System.Drawing.Size(124, 20);
-            this.Services_comment_label.TabIndex = 12;
+            this.Services_comment_label.TabIndex = 0;
             this.Services_comment_label.Text = "Комментарий";
             // 
             // Services_price_label
@@ -654,7 +656,7 @@
             this.Services_price_label.Location = new System.Drawing.Point(575, 79);
             this.Services_price_label.Name = "Services_price_label";
             this.Services_price_label.Size = new System.Drawing.Size(52, 20);
-            this.Services_price_label.TabIndex = 11;
+            this.Services_price_label.TabIndex = 0;
             this.Services_price_label.Text = "Цена";
             // 
             // Services_name_label
@@ -664,7 +666,7 @@
             this.Services_name_label.Location = new System.Drawing.Point(493, 44);
             this.Services_name_label.Name = "Services_name_label";
             this.Services_name_label.Size = new System.Drawing.Size(134, 20);
-            this.Services_name_label.TabIndex = 10;
+            this.Services_name_label.TabIndex = 0;
             this.Services_name_label.Text = "Наименование";
             // 
             // Clients
@@ -673,7 +675,7 @@
             this.Clients.Controls.Add(this.Clients_clientID_label);
             this.Clients.Controls.Add(this.Clients_mode);
             this.Clients.Controls.Add(this.Clients_mode_label);
-            this.Clients.Controls.Add(this.Clients_accept_button);
+            this.Clients.Controls.Add(this.Clients_button);
             this.Clients.Controls.Add(this.Clients_dataGridView);
             this.Clients.Controls.Add(this.Clients_phonenumber);
             this.Clients.Controls.Add(this.Clients_name);
@@ -689,14 +691,34 @@
             this.Clients.Text = "Клиенты";
             this.Clients.UseVisualStyleBackColor = true;
             // 
+            // Clients_clientID
+            // 
+            this.Clients_clientID.Enabled = false;
+            this.Clients_clientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Clients_clientID.Location = new System.Drawing.Point(634, 8);
+            this.Clients_clientID.Name = "Clients_clientID";
+            this.Clients_clientID.Size = new System.Drawing.Size(332, 27);
+            this.Clients_clientID.TabIndex = 1;
+            // 
+            // Clients_clientID_label
+            // 
+            this.Clients_clientID_label.AutoSize = true;
+            this.Clients_clientID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Clients_clientID_label.Location = new System.Drawing.Point(511, 11);
+            this.Clients_clientID_label.Name = "Clients_clientID_label";
+            this.Clients_clientID_label.Size = new System.Drawing.Size(116, 20);
+            this.Clients_clientID_label.TabIndex = 0;
+            this.Clients_clientID_label.Text = "Код клиента";
+            // 
             // Clients_mode
             // 
+            this.Clients_mode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Clients_mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Clients_mode.FormattingEnabled = true;
             this.Clients_mode.Location = new System.Drawing.Point(6, 337);
             this.Clients_mode.Name = "Clients_mode";
             this.Clients_mode.Size = new System.Drawing.Size(186, 28);
-            this.Clients_mode.TabIndex = 26;
+            this.Clients_mode.TabIndex = 6;
             this.Clients_mode.SelectedIndexChanged += new System.EventHandler(this.Clients_mode_SelectedIndexChanged);
             // 
             // Clients_mode_label
@@ -706,20 +728,20 @@
             this.Clients_mode_label.Location = new System.Drawing.Point(2, 315);
             this.Clients_mode_label.Name = "Clients_mode_label";
             this.Clients_mode_label.Size = new System.Drawing.Size(64, 20);
-            this.Clients_mode_label.TabIndex = 25;
+            this.Clients_mode_label.TabIndex = 0;
             this.Clients_mode_label.Text = "Режим";
             // 
-            // Clients_accept_button
+            // Clients_button
             // 
-            this.Clients_accept_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Clients_accept_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clients_accept_button.Location = new System.Drawing.Point(766, 315);
-            this.Clients_accept_button.Name = "Clients_accept_button";
-            this.Clients_accept_button.Size = new System.Drawing.Size(200, 50);
-            this.Clients_accept_button.TabIndex = 24;
-            this.Clients_accept_button.Text = "Добавить";
-            this.Clients_accept_button.UseVisualStyleBackColor = true;
-            this.Clients_accept_button.Click += new System.EventHandler(this.Clients_accept_button_Click);
+            this.Clients_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Clients_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Clients_button.Location = new System.Drawing.Point(766, 315);
+            this.Clients_button.Name = "Clients_button";
+            this.Clients_button.Size = new System.Drawing.Size(200, 50);
+            this.Clients_button.TabIndex = 5;
+            this.Clients_button.Text = "Добавить";
+            this.Clients_button.UseVisualStyleBackColor = true;
+            this.Clients_button.Click += new System.EventHandler(this.Clients_button_Click);
             // 
             // Clients_dataGridView
             // 
@@ -738,7 +760,7 @@
             this.Clients_dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Clients_dataGridView.RowTemplate.Height = 24;
             this.Clients_dataGridView.Size = new System.Drawing.Size(960, 346);
-            this.Clients_dataGridView.TabIndex = 23;
+            this.Clients_dataGridView.TabIndex = 0;
             // 
             // clientIDDataGridViewTextBoxColumn
             // 
@@ -777,7 +799,7 @@
             this.Clients_phonenumber.Multiline = true;
             this.Clients_phonenumber.Name = "Clients_phonenumber";
             this.Clients_phonenumber.Size = new System.Drawing.Size(332, 27);
-            this.Clients_phonenumber.TabIndex = 22;
+            this.Clients_phonenumber.TabIndex = 4;
             // 
             // Clients_name
             // 
@@ -785,7 +807,7 @@
             this.Clients_name.Location = new System.Drawing.Point(634, 76);
             this.Clients_name.Name = "Clients_name";
             this.Clients_name.Size = new System.Drawing.Size(332, 27);
-            this.Clients_name.TabIndex = 21;
+            this.Clients_name.TabIndex = 3;
             // 
             // Clients_surname
             // 
@@ -793,7 +815,7 @@
             this.Clients_surname.Location = new System.Drawing.Point(634, 41);
             this.Clients_surname.Name = "Clients_surname";
             this.Clients_surname.Size = new System.Drawing.Size(332, 27);
-            this.Clients_surname.TabIndex = 20;
+            this.Clients_surname.TabIndex = 2;
             // 
             // Clients_phonenumber_label
             // 
@@ -802,7 +824,7 @@
             this.Clients_phonenumber_label.Location = new System.Drawing.Point(472, 114);
             this.Clients_phonenumber_label.Name = "Clients_phonenumber_label";
             this.Clients_phonenumber_label.Size = new System.Drawing.Size(155, 20);
-            this.Clients_phonenumber_label.TabIndex = 19;
+            this.Clients_phonenumber_label.TabIndex = 0;
             this.Clients_phonenumber_label.Text = "Номер телефона";
             // 
             // Clients_name_label
@@ -812,7 +834,7 @@
             this.Clients_name_label.Location = new System.Drawing.Point(585, 79);
             this.Clients_name_label.Name = "Clients_name_label";
             this.Clients_name_label.Size = new System.Drawing.Size(42, 20);
-            this.Clients_name_label.TabIndex = 18;
+            this.Clients_name_label.TabIndex = 0;
             this.Clients_name_label.Text = "Имя";
             // 
             // Clients_surname_label
@@ -822,7 +844,7 @@
             this.Clients_surname_label.Location = new System.Drawing.Point(540, 44);
             this.Clients_surname_label.Name = "Clients_surname_label";
             this.Clients_surname_label.Size = new System.Drawing.Size(87, 20);
-            this.Clients_surname_label.TabIndex = 17;
+            this.Clients_surname_label.TabIndex = 0;
             this.Clients_surname_label.Text = "Фамилия";
             // 
             // Records
@@ -851,14 +873,34 @@
             this.Records.Text = "Записи";
             this.Records.UseVisualStyleBackColor = true;
             // 
+            // Records_recordID
+            // 
+            this.Records_recordID.Enabled = false;
+            this.Records_recordID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Records_recordID.Location = new System.Drawing.Point(634, 8);
+            this.Records_recordID.Name = "Records_recordID";
+            this.Records_recordID.Size = new System.Drawing.Size(332, 27);
+            this.Records_recordID.TabIndex = 1;
+            // 
+            // Records_recordID_label
+            // 
+            this.Records_recordID_label.AutoSize = true;
+            this.Records_recordID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Records_recordID_label.Location = new System.Drawing.Point(523, 11);
+            this.Records_recordID_label.Name = "Records_recordID_label";
+            this.Records_recordID_label.Size = new System.Drawing.Size(105, 20);
+            this.Records_recordID_label.TabIndex = 0;
+            this.Records_recordID_label.Text = "Код записи";
+            // 
             // Records_mode
             // 
+            this.Records_mode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Records_mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Records_mode.FormattingEnabled = true;
             this.Records_mode.Location = new System.Drawing.Point(6, 337);
             this.Records_mode.Name = "Records_mode";
             this.Records_mode.Size = new System.Drawing.Size(186, 28);
-            this.Records_mode.TabIndex = 34;
+            this.Records_mode.TabIndex = 8;
             this.Records_mode.SelectedIndexChanged += new System.EventHandler(this.Records_mode_SelectedIndexChanged);
             // 
             // Records_mode_label
@@ -868,7 +910,7 @@
             this.Records_mode_label.Location = new System.Drawing.Point(2, 315);
             this.Records_mode_label.Name = "Records_mode_label";
             this.Records_mode_label.Size = new System.Drawing.Size(64, 20);
-            this.Records_mode_label.TabIndex = 33;
+            this.Records_mode_label.TabIndex = 0;
             this.Records_mode_label.Text = "Режим";
             // 
             // Records_datetime
@@ -877,7 +919,7 @@
             this.Records_datetime.Location = new System.Drawing.Point(634, 147);
             this.Records_datetime.Name = "Records_datetime";
             this.Records_datetime.Size = new System.Drawing.Size(332, 22);
-            this.Records_datetime.TabIndex = 32;
+            this.Records_datetime.TabIndex = 5;
             // 
             // Records_accept_button
             // 
@@ -886,7 +928,7 @@
             this.Records_accept_button.Location = new System.Drawing.Point(766, 315);
             this.Records_accept_button.Name = "Records_accept_button";
             this.Records_accept_button.Size = new System.Drawing.Size(200, 50);
-            this.Records_accept_button.TabIndex = 31;
+            this.Records_accept_button.TabIndex = 7;
             this.Records_accept_button.Text = "Добавить";
             this.Records_accept_button.UseVisualStyleBackColor = true;
             this.Records_accept_button.Click += new System.EventHandler(this.Records_accept_button_Click);
@@ -911,7 +953,7 @@
             this.Records_dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Records_dataGridView.RowTemplate.Height = 24;
             this.Records_dataGridView.Size = new System.Drawing.Size(960, 346);
-            this.Records_dataGridView.TabIndex = 30;
+            this.Records_dataGridView.TabIndex = 0;
             // 
             // recordIDDataGridViewTextBoxColumn
             // 
@@ -968,7 +1010,7 @@
             this.Records_comment.Multiline = true;
             this.Records_comment.Name = "Records_comment";
             this.Records_comment.Size = new System.Drawing.Size(332, 94);
-            this.Records_comment.TabIndex = 28;
+            this.Records_comment.TabIndex = 6;
             // 
             // Records_serviceID
             // 
@@ -976,7 +1018,7 @@
             this.Records_serviceID.Location = new System.Drawing.Point(634, 111);
             this.Records_serviceID.Name = "Records_serviceID";
             this.Records_serviceID.Size = new System.Drawing.Size(332, 27);
-            this.Records_serviceID.TabIndex = 25;
+            this.Records_serviceID.TabIndex = 4;
             // 
             // Records_employeeID
             // 
@@ -984,7 +1026,7 @@
             this.Records_employeeID.Location = new System.Drawing.Point(634, 76);
             this.Records_employeeID.Name = "Records_employeeID";
             this.Records_employeeID.Size = new System.Drawing.Size(332, 27);
-            this.Records_employeeID.TabIndex = 24;
+            this.Records_employeeID.TabIndex = 3;
             // 
             // Records_clientID
             // 
@@ -992,7 +1034,7 @@
             this.Records_clientID.Location = new System.Drawing.Point(634, 41);
             this.Records_clientID.Name = "Records_clientID";
             this.Records_clientID.Size = new System.Drawing.Size(332, 27);
-            this.Records_clientID.TabIndex = 23;
+            this.Records_clientID.TabIndex = 2;
             // 
             // Records_comment_label
             // 
@@ -1001,7 +1043,7 @@
             this.Records_comment_label.Location = new System.Drawing.Point(505, 181);
             this.Records_comment_label.Name = "Records_comment_label";
             this.Records_comment_label.Size = new System.Drawing.Size(124, 20);
-            this.Records_comment_label.TabIndex = 21;
+            this.Records_comment_label.TabIndex = 0;
             this.Records_comment_label.Text = "Комментарий";
             // 
             // Records_datetime_label
@@ -1011,7 +1053,7 @@
             this.Records_datetime_label.Location = new System.Drawing.Point(504, 149);
             this.Records_datetime_label.Name = "Records_datetime_label";
             this.Records_datetime_label.Size = new System.Drawing.Size(124, 20);
-            this.Records_datetime_label.TabIndex = 19;
+            this.Records_datetime_label.TabIndex = 0;
             this.Records_datetime_label.Text = "Дата и время";
             // 
             // Records_serviceid_label
@@ -1021,7 +1063,7 @@
             this.Records_serviceid_label.Location = new System.Drawing.Point(528, 114);
             this.Records_serviceid_label.Name = "Records_serviceid_label";
             this.Records_serviceid_label.Size = new System.Drawing.Size(100, 20);
-            this.Records_serviceid_label.TabIndex = 18;
+            this.Records_serviceid_label.TabIndex = 0;
             this.Records_serviceid_label.Text = "Код услуги";
             // 
             // Records_employeeID_label
@@ -1031,7 +1073,7 @@
             this.Records_employeeID_label.Location = new System.Drawing.Point(483, 79);
             this.Records_employeeID_label.Name = "Records_employeeID_label";
             this.Records_employeeID_label.Size = new System.Drawing.Size(145, 20);
-            this.Records_employeeID_label.TabIndex = 17;
+            this.Records_employeeID_label.TabIndex = 0;
             this.Records_employeeID_label.Text = "Код сотрудника";
             // 
             // Records_clientID_label
@@ -1041,7 +1083,7 @@
             this.Records_clientID_label.Location = new System.Drawing.Point(512, 44);
             this.Records_clientID_label.Name = "Records_clientID_label";
             this.Records_clientID_label.Size = new System.Drawing.Size(116, 20);
-            this.Records_clientID_label.TabIndex = 16;
+            this.Records_clientID_label.TabIndex = 0;
             this.Records_clientID_label.Text = "Код клиента";
             // 
             // Shares
@@ -1066,14 +1108,34 @@
             this.Shares.Text = "Акции";
             this.Shares.UseVisualStyleBackColor = true;
             // 
+            // Shares_shareID
+            // 
+            this.Shares_shareID.Enabled = false;
+            this.Shares_shareID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Shares_shareID.Location = new System.Drawing.Point(634, 8);
+            this.Shares_shareID.Name = "Shares_shareID";
+            this.Shares_shareID.Size = new System.Drawing.Size(332, 27);
+            this.Shares_shareID.TabIndex = 1;
+            // 
+            // Shares_shareID_label
+            // 
+            this.Shares_shareID_label.AutoSize = true;
+            this.Shares_shareID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Shares_shareID_label.Location = new System.Drawing.Point(532, 11);
+            this.Shares_shareID_label.Name = "Shares_shareID_label";
+            this.Shares_shareID_label.Size = new System.Drawing.Size(96, 20);
+            this.Shares_shareID_label.TabIndex = 0;
+            this.Shares_shareID_label.Text = "Код акции";
+            // 
             // Shares_mode
             // 
+            this.Shares_mode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Shares_mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Shares_mode.FormattingEnabled = true;
             this.Shares_mode.Location = new System.Drawing.Point(6, 337);
             this.Shares_mode.Name = "Shares_mode";
             this.Shares_mode.Size = new System.Drawing.Size(186, 28);
-            this.Shares_mode.TabIndex = 36;
+            this.Shares_mode.TabIndex = 6;
             this.Shares_mode.SelectedIndexChanged += new System.EventHandler(this.Shares_mode_SelectedIndexChanged);
             // 
             // Shares_mode_label
@@ -1083,7 +1145,7 @@
             this.Shares_mode_label.Location = new System.Drawing.Point(2, 315);
             this.Shares_mode_label.Name = "Shares_mode_label";
             this.Shares_mode_label.Size = new System.Drawing.Size(64, 20);
-            this.Shares_mode_label.TabIndex = 35;
+            this.Shares_mode_label.TabIndex = 0;
             this.Shares_mode_label.Text = "Режим";
             // 
             // Shares_expirationdate
@@ -1092,7 +1154,7 @@
             this.Shares_expirationdate.Location = new System.Drawing.Point(634, 112);
             this.Shares_expirationdate.Name = "Shares_expirationdate";
             this.Shares_expirationdate.Size = new System.Drawing.Size(332, 22);
-            this.Shares_expirationdate.TabIndex = 34;
+            this.Shares_expirationdate.TabIndex = 4;
             // 
             // Shares_startdate
             // 
@@ -1100,7 +1162,7 @@
             this.Shares_startdate.Location = new System.Drawing.Point(634, 77);
             this.Shares_startdate.Name = "Shares_startdate";
             this.Shares_startdate.Size = new System.Drawing.Size(332, 22);
-            this.Shares_startdate.TabIndex = 33;
+            this.Shares_startdate.TabIndex = 3;
             // 
             // Shares_accept_button
             // 
@@ -1109,7 +1171,7 @@
             this.Shares_accept_button.Location = new System.Drawing.Point(766, 315);
             this.Shares_accept_button.Name = "Shares_accept_button";
             this.Shares_accept_button.Size = new System.Drawing.Size(200, 50);
-            this.Shares_accept_button.TabIndex = 31;
+            this.Shares_accept_button.TabIndex = 5;
             this.Shares_accept_button.Text = "Добавить";
             this.Shares_accept_button.UseVisualStyleBackColor = true;
             this.Shares_accept_button.Click += new System.EventHandler(this.Shares_accept_button_Click);
@@ -1131,7 +1193,7 @@
             this.Shares_dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Shares_dataGridView.RowTemplate.Height = 24;
             this.Shares_dataGridView.Size = new System.Drawing.Size(960, 346);
-            this.Shares_dataGridView.TabIndex = 30;
+            this.Shares_dataGridView.TabIndex = 0;
             // 
             // shareIDDataGridViewTextBoxColumn
             // 
@@ -1169,7 +1231,7 @@
             this.Shares_name.Location = new System.Drawing.Point(634, 41);
             this.Shares_name.Name = "Shares_name";
             this.Shares_name.Size = new System.Drawing.Size(332, 27);
-            this.Shares_name.TabIndex = 27;
+            this.Shares_name.TabIndex = 2;
             // 
             // Shares_expirationdate_label
             // 
@@ -1178,7 +1240,7 @@
             this.Shares_expirationdate_label.Location = new System.Drawing.Point(482, 114);
             this.Shares_expirationdate_label.Name = "Shares_expirationdate_label";
             this.Shares_expirationdate_label.Size = new System.Drawing.Size(146, 20);
-            this.Shares_expirationdate_label.TabIndex = 26;
+            this.Shares_expirationdate_label.TabIndex = 0;
             this.Shares_expirationdate_label.Text = "Дата истечения";
             // 
             // Shares_startdate_label
@@ -1188,7 +1250,7 @@
             this.Shares_startdate_label.Location = new System.Drawing.Point(511, 79);
             this.Shares_startdate_label.Name = "Shares_startdate_label";
             this.Shares_startdate_label.Size = new System.Drawing.Size(117, 20);
-            this.Shares_startdate_label.TabIndex = 25;
+            this.Shares_startdate_label.TabIndex = 0;
             this.Shares_startdate_label.Text = "Дата начала";
             // 
             // Shares_name_label
@@ -1198,7 +1260,7 @@
             this.Shares_name_label.Location = new System.Drawing.Point(494, 44);
             this.Shares_name_label.Name = "Shares_name_label";
             this.Shares_name_label.Size = new System.Drawing.Size(134, 20);
-            this.Shares_name_label.TabIndex = 24;
+            this.Shares_name_label.TabIndex = 0;
             this.Shares_name_label.Text = "Наименование";
             // 
             // Discounts
@@ -1223,14 +1285,34 @@
             this.Discounts.Text = "Скидки";
             this.Discounts.UseVisualStyleBackColor = true;
             // 
+            // Discounts_discountID
+            // 
+            this.Discounts_discountID.Enabled = false;
+            this.Discounts_discountID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Discounts_discountID.Location = new System.Drawing.Point(634, 8);
+            this.Discounts_discountID.Name = "Discounts_discountID";
+            this.Discounts_discountID.Size = new System.Drawing.Size(332, 27);
+            this.Discounts_discountID.TabIndex = 1;
+            // 
+            // Discounts_discountID_label
+            // 
+            this.Discounts_discountID_label.AutoSize = true;
+            this.Discounts_discountID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Discounts_discountID_label.Location = new System.Drawing.Point(522, 11);
+            this.Discounts_discountID_label.Name = "Discounts_discountID_label";
+            this.Discounts_discountID_label.Size = new System.Drawing.Size(106, 20);
+            this.Discounts_discountID_label.TabIndex = 0;
+            this.Discounts_discountID_label.Text = "Код скидки";
+            // 
             // Discounts_mode
             // 
+            this.Discounts_mode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Discounts_mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Discounts_mode.FormattingEnabled = true;
             this.Discounts_mode.Location = new System.Drawing.Point(6, 337);
             this.Discounts_mode.Name = "Discounts_mode";
             this.Discounts_mode.Size = new System.Drawing.Size(186, 28);
-            this.Discounts_mode.TabIndex = 40;
+            this.Discounts_mode.TabIndex = 6;
             this.Discounts_mode.SelectedIndexChanged += new System.EventHandler(this.Discounts_mode_SelectedIndexChanged);
             // 
             // Discounts_mode_label
@@ -1240,7 +1322,7 @@
             this.Discounts_mode_label.Location = new System.Drawing.Point(2, 315);
             this.Discounts_mode_label.Name = "Discounts_mode_label";
             this.Discounts_mode_label.Size = new System.Drawing.Size(64, 20);
-            this.Discounts_mode_label.TabIndex = 39;
+            this.Discounts_mode_label.TabIndex = 0;
             this.Discounts_mode_label.Text = "Режим";
             // 
             // Discounts_accept_button
@@ -1250,7 +1332,7 @@
             this.Discounts_accept_button.Location = new System.Drawing.Point(766, 315);
             this.Discounts_accept_button.Name = "Discounts_accept_button";
             this.Discounts_accept_button.Size = new System.Drawing.Size(200, 50);
-            this.Discounts_accept_button.TabIndex = 38;
+            this.Discounts_accept_button.TabIndex = 5;
             this.Discounts_accept_button.Text = "Добавить";
             this.Discounts_accept_button.UseVisualStyleBackColor = true;
             this.Discounts_accept_button.Click += new System.EventHandler(this.Discounts_accept_button_Click);
@@ -1272,7 +1354,7 @@
             this.Discounts_dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Discounts_dataGridView.RowTemplate.Height = 24;
             this.Discounts_dataGridView.Size = new System.Drawing.Size(960, 346);
-            this.Discounts_dataGridView.TabIndex = 37;
+            this.Discounts_dataGridView.TabIndex = 0;
             // 
             // discountIDDataGridViewTextBoxColumn
             // 
@@ -1311,7 +1393,7 @@
             this.Discounts_value.Multiline = true;
             this.Discounts_value.Name = "Discounts_value";
             this.Discounts_value.Size = new System.Drawing.Size(332, 27);
-            this.Discounts_value.TabIndex = 36;
+            this.Discounts_value.TabIndex = 4;
             // 
             // Discounts_serviceID
             // 
@@ -1319,7 +1401,7 @@
             this.Discounts_serviceID.Location = new System.Drawing.Point(634, 76);
             this.Discounts_serviceID.Name = "Discounts_serviceID";
             this.Discounts_serviceID.Size = new System.Drawing.Size(332, 27);
-            this.Discounts_serviceID.TabIndex = 35;
+            this.Discounts_serviceID.TabIndex = 3;
             // 
             // Discounts_shareID
             // 
@@ -1327,7 +1409,7 @@
             this.Discounts_shareID.Location = new System.Drawing.Point(634, 41);
             this.Discounts_shareID.Name = "Discounts_shareID";
             this.Discounts_shareID.Size = new System.Drawing.Size(332, 27);
-            this.Discounts_shareID.TabIndex = 34;
+            this.Discounts_shareID.TabIndex = 2;
             // 
             // Discounts_value_label
             // 
@@ -1336,7 +1418,7 @@
             this.Discounts_value_label.Location = new System.Drawing.Point(473, 114);
             this.Discounts_value_label.Name = "Discounts_value_label";
             this.Discounts_value_label.Size = new System.Drawing.Size(155, 20);
-            this.Discounts_value_label.TabIndex = 33;
+            this.Discounts_value_label.TabIndex = 0;
             this.Discounts_value_label.Text = "Величина скидки";
             // 
             // Discounts_serviceID_label
@@ -1346,7 +1428,7 @@
             this.Discounts_serviceID_label.Location = new System.Drawing.Point(528, 79);
             this.Discounts_serviceID_label.Name = "Discounts_serviceID_label";
             this.Discounts_serviceID_label.Size = new System.Drawing.Size(100, 20);
-            this.Discounts_serviceID_label.TabIndex = 32;
+            this.Discounts_serviceID_label.TabIndex = 0;
             this.Discounts_serviceID_label.Text = "Код услуги";
             // 
             // Discounts_shareID_label
@@ -1356,7 +1438,7 @@
             this.Discounts_shareID_label.Location = new System.Drawing.Point(532, 44);
             this.Discounts_shareID_label.Name = "Discounts_shareID_label";
             this.Discounts_shareID_label.Size = new System.Drawing.Size(96, 20);
-            this.Discounts_shareID_label.TabIndex = 31;
+            this.Discounts_shareID_label.TabIndex = 0;
             this.Discounts_shareID_label.Text = "Код акции";
             // 
             // employeesTableAdapter
@@ -1382,82 +1464,6 @@
             // discountsTableAdapter
             // 
             this.discountsTableAdapter.ClearBeforeFill = true;
-            // 
-            // Clients_clientID
-            // 
-            this.Clients_clientID.Enabled = false;
-            this.Clients_clientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clients_clientID.Location = new System.Drawing.Point(634, 8);
-            this.Clients_clientID.Name = "Clients_clientID";
-            this.Clients_clientID.Size = new System.Drawing.Size(332, 27);
-            this.Clients_clientID.TabIndex = 28;
-            // 
-            // Clients_clientID_label
-            // 
-            this.Clients_clientID_label.AutoSize = true;
-            this.Clients_clientID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clients_clientID_label.Location = new System.Drawing.Point(511, 11);
-            this.Clients_clientID_label.Name = "Clients_clientID_label";
-            this.Clients_clientID_label.Size = new System.Drawing.Size(116, 20);
-            this.Clients_clientID_label.TabIndex = 27;
-            this.Clients_clientID_label.Text = "Код клиента";
-            // 
-            // Records_recordID
-            // 
-            this.Records_recordID.Enabled = false;
-            this.Records_recordID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_recordID.Location = new System.Drawing.Point(634, 8);
-            this.Records_recordID.Name = "Records_recordID";
-            this.Records_recordID.Size = new System.Drawing.Size(332, 27);
-            this.Records_recordID.TabIndex = 36;
-            // 
-            // Records_recordID_label
-            // 
-            this.Records_recordID_label.AutoSize = true;
-            this.Records_recordID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Records_recordID_label.Location = new System.Drawing.Point(523, 11);
-            this.Records_recordID_label.Name = "Records_recordID_label";
-            this.Records_recordID_label.Size = new System.Drawing.Size(105, 20);
-            this.Records_recordID_label.TabIndex = 35;
-            this.Records_recordID_label.Text = "Код записи";
-            // 
-            // Shares_shareID
-            // 
-            this.Shares_shareID.Enabled = false;
-            this.Shares_shareID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_shareID.Location = new System.Drawing.Point(634, 8);
-            this.Shares_shareID.Name = "Shares_shareID";
-            this.Shares_shareID.Size = new System.Drawing.Size(332, 27);
-            this.Shares_shareID.TabIndex = 38;
-            // 
-            // Shares_shareID_label
-            // 
-            this.Shares_shareID_label.AutoSize = true;
-            this.Shares_shareID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Shares_shareID_label.Location = new System.Drawing.Point(532, 11);
-            this.Shares_shareID_label.Name = "Shares_shareID_label";
-            this.Shares_shareID_label.Size = new System.Drawing.Size(96, 20);
-            this.Shares_shareID_label.TabIndex = 37;
-            this.Shares_shareID_label.Text = "Код акции";
-            // 
-            // Discounts_discountID
-            // 
-            this.Discounts_discountID.Enabled = false;
-            this.Discounts_discountID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_discountID.Location = new System.Drawing.Point(634, 8);
-            this.Discounts_discountID.Name = "Discounts_discountID";
-            this.Discounts_discountID.Size = new System.Drawing.Size(332, 27);
-            this.Discounts_discountID.TabIndex = 42;
-            // 
-            // Discounts_discountID_label
-            // 
-            this.Discounts_discountID_label.AutoSize = true;
-            this.Discounts_discountID_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Discounts_discountID_label.Location = new System.Drawing.Point(522, 11);
-            this.Discounts_discountID_label.Name = "Discounts_discountID_label";
-            this.Discounts_discountID_label.Size = new System.Drawing.Size(106, 20);
-            this.Discounts_discountID_label.TabIndex = 41;
-            this.Discounts_discountID_label.Text = "Код скидки";
             // 
             // MainForm
             // 
@@ -1563,7 +1569,7 @@
         private System.Windows.Forms.Label Discounts_shareID_label;
         private System.Windows.Forms.Button Employees_accept_button;
         private System.Windows.Forms.Button Services_accept_button;
-        private System.Windows.Forms.Button Clients_accept_button;
+        private System.Windows.Forms.Button Clients_button;
         private System.Windows.Forms.Button Records_accept_button;
         private System.Windows.Forms.Button Shares_accept_button;
         private System.Windows.Forms.Button Discounts_accept_button;
