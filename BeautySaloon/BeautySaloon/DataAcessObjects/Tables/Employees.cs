@@ -4,20 +4,26 @@ namespace BeautySaloon.DataAcessObjects.Tables
 {
     static class Employees
     {
+        // Шаблон команды для добавления записи
         const string InsertEmployeeCommand = "INSERT INTO \"employees\"" +
             "(\"surname\", \"name\", \"lastname\", \"phone_number\", \"address\", \"specialization\", \"start_date\")" +
             " VALUES (@1, @2, @3, @4, @5, @6, @7)";
 
+        // Шаблон команды для изменения записи
         const string UpdateEmployeeCommand = "UPDATE \"employees\"" +
             " SET \"surname\" = @2, \"name\" = @3, \"lastname\" = @4, \"phone_number\" = @5, \"address\" = @6, \"specialization\" = @7, \"start_date\" = @8" +
             " WHERE \"employeeID\" = @1";
 
+        // Шаблон команды для удаления записи
         const string DeleteEmployeeCommand = "DELETE FROM \"employees\"" +
             " WHERE \"employeeID\" = @1";
 
+        // Метод для добавления в БД
         public static void Insert(string surname, string name, string lastname, string phonenumber, string address, string specialization, DateTime startDate)
         {
+            // Подключение к БД
             Database.Connect();
+            // Составление команды с помощью соотвутствующей строки
             using (var cmd = Database.Connection.CreateCommand())
             {
                 cmd.CommandText = InsertEmployeeCommand;
@@ -32,6 +38,7 @@ namespace BeautySaloon.DataAcessObjects.Tables
                 cmd.Parameters.AddWithValue("7", startDateString);
                 cmd.ExecuteNonQuery();
             }
+            // Закрытие подключения
             Database.Disconnect();
         }
 

@@ -1,0 +1,9 @@
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\bin\Release\BeautySaloon.exe.config
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\bin\Release\BeautySaloon.exe
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\bin\Release\BeautySaloon.pdb
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Release\BeautySaloon.MainForm.resources
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Release\BeautySaloon.Properties.Resources.resources
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Release\WindowsFormsApplication.csproj.GenerateResource.cache
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Release\WindowsFormsApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Release\BeautySaloon.exe
+C:\Users\Lionheart\Source\Repos\BeautySaloon\BeautySaloon\BeautySaloon\obj\Release\BeautySaloon.pdb

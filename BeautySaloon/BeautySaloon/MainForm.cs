@@ -11,6 +11,7 @@ namespace BeautySaloon
             InitializeComponent();
         }
 
+        // Событие при загрузке формы
         private void MainForm_Load(object sender, EventArgs e)
         {
             // Заполняем таблицы данными из базы данных
@@ -20,7 +21,7 @@ namespace BeautySaloon
             this.clientsTableAdapter.Fill(this.beauty_saloonDataSet.clients);
             this.servicesTableAdapter.Fill(this.beauty_saloonDataSet.services);
             this.employeesTableAdapter.Fill(this.beauty_saloonDataSet.employees);
-            // 
+            // Привязываем режимы из Enums.CRUDMode к элементам для смены режима на страницах формы
             this.Employees_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
             this.Services_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
             this.Clients_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
@@ -29,12 +30,12 @@ namespace BeautySaloon
             this.Discounts_mode.DataSource = Enum.GetValues(typeof(CRUDMode));
         }
 
+        // Нажатие кнопки на странице клиентов
         private void Clients_button_Click(object sender, EventArgs e)
         {
-            // Добавление в базу данных
-            var button = sender as Button;
             try
             {
+                // В зависимости от текущего установленного режима выбирается действие
                 switch (Clients_mode.SelectedIndex)
                 {
                     case (int)CRUDMode.Добавление:
@@ -53,12 +54,15 @@ namespace BeautySaloon
                         break;
                 }
             }
+            // Если возникла ошибка - вывести её в окошке
             catch (Exception ex)
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
+            // Очистка полей страницы в форме
             Clients_Update();
         }
+        // Смена режима на странице клиентов
         private void Clients_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             var box = sender as ComboBox;
@@ -75,44 +79,13 @@ namespace BeautySaloon
                     break;
             }
         }
-        private void Clients_Update()
-        {
-            this.clientsTableAdapter.Fill(this.beauty_saloonDataSet.clients);
-            Clients_clientID.Clear();
-            Clients_surname.Clear();
-            Clients_name.Clear();
-            Clients_phonenumber.Clear();
-        }
-        private void Clients_AddMode()
-        {
-            Clients_button.Text = ButtonType.Добавить.ToString();
-            Clients_clientID.Enabled = false;
-            Clients_surname.Enabled = true;
-            Clients_name.Enabled = true;
-            Clients_phonenumber.Enabled = true;
-        }
-        private void Clients_ChangeMode()
-        {
-            Clients_button.Text = ButtonType.Изменить.ToString();
-            Clients_clientID.Enabled = true;
-            Clients_surname.Enabled = true;
-            Clients_name.Enabled = true;
-            Clients_phonenumber.Enabled = true;
-        }
-        private void Clients_RemoveMode()
-        {
-            Clients_button.Text = ButtonType.Удалить.ToString();
-            Clients_clientID.Enabled = true;
-            Clients_surname.Enabled = false;
-            Clients_name.Enabled = false;
-            Clients_phonenumber.Enabled = false;
-        }
-
+        
+        // Нажатие кнопки на странице записей
         private void Records_accept_button_Click(object sender, EventArgs e)
         {
-            // Добавление в базу данных
             try
             {
+                // В зависимости от текущего установленного режима выбирается действие
                 switch (Records_mode.SelectedIndex)
                 {
                     case (int)CRUDMode.Добавление:
@@ -133,12 +106,15 @@ namespace BeautySaloon
                         break;
                 }
             }
+            // Если возникла ошибка - вывести её в окошке
             catch (Exception ex)
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
+            // Очистка полей страницы в форме
             Records_Update();
         }
+        // Смена режима на странице записей
         private void Records_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             var box = sender as ComboBox;
@@ -155,52 +131,13 @@ namespace BeautySaloon
                     break;
             }
         }
-        private void Records_Update()
-        {
-            this.recordsTableAdapter.Fill(this.beauty_saloonDataSet.records);
-            Records_recordID.Clear();
-            Records_clientID.Clear();
-            Records_employeeID.Clear();
-            Records_serviceID.Clear();
-            Records_datetime.ResetText();
-            Records_comment.Clear();
-        }
-        private void Records_AddMode()
-        {
-            Records_accept_button.Text = ButtonType.Добавить.ToString();
-            Records_recordID.Enabled = false;
-            Records_clientID.Enabled = true;
-            Records_employeeID.Enabled = true;
-            Records_serviceID.Enabled = true;
-            Records_datetime.Enabled = true;
-            Records_comment.Enabled = true;
-        }
-        private void Records_ChangeMode()
-        {
-            Records_accept_button.Text = ButtonType.Изменить.ToString();
-            Records_recordID.Enabled = true;
-            Records_clientID.Enabled = true;
-            Records_employeeID.Enabled = true;
-            Records_serviceID.Enabled = true;
-            Records_datetime.Enabled = true;
-            Records_comment.Enabled = true;
-        }
-        private void Records_RemoveMode()
-        {
-            Records_accept_button.Text = ButtonType.Удалить.ToString();
-            Records_recordID.Enabled = true;
-            Records_clientID.Enabled = false;
-            Records_employeeID.Enabled = false;
-            Records_serviceID.Enabled = false;
-            Records_datetime.Enabled = false;
-            Records_comment.Enabled = false;
-        }
-
+        
+        // Нажатие кнопки на странице акций
         private void Shares_accept_button_Click(object sender, EventArgs e)
         {
-            // Добавление в базу данных
             try
             {
+                // В зависимости от текущего установленного режима выбирается действие
                 switch (Shares_mode.SelectedIndex)
                 {
                     case (int)CRUDMode.Добавление:
@@ -219,12 +156,15 @@ namespace BeautySaloon
                         break;
                 }
             }
+            // Если возникла ошибка - вывести её в окошке
             catch (Exception ex)
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
+            // Очистка полей страницы в форме
             Shares_Update();
         }
+        // Смена режима на странице акций
         private void Shares_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             var box = sender as ComboBox;
@@ -241,44 +181,13 @@ namespace BeautySaloon
                     break;
             }
         }
-        private void Shares_Update()
-        {
-            this.sharesTableAdapter.Fill(this.beauty_saloonDataSet.shares);
-            Shares_shareID.Clear();
-            Shares_name.Clear();
-            Shares_startdate.ResetText();
-            Shares_expirationdate.ResetText();
-        }
-        private void Shares_AddMode()
-        {
-            Shares_accept_button.Text = ButtonType.Добавить.ToString();
-            Shares_shareID.Enabled = false;
-            Shares_name.Enabled = true;
-            Shares_startdate.Enabled = true;
-            Shares_expirationdate.Enabled = true;
-        }
-        private void Shares_ChangeMode()
-        {
-            Shares_accept_button.Text = ButtonType.Изменить.ToString();
-            Shares_shareID.Enabled = true;
-            Shares_name.Enabled = true;
-            Shares_startdate.Enabled = true;
-            Shares_expirationdate.Enabled = true;
-        }
-        private void Shares_RemoveMode()
-        {
-            Shares_accept_button.Text = ButtonType.Удалить.ToString();
-            Shares_shareID.Enabled = true;
-            Shares_name.Enabled = false;
-            Shares_startdate.Enabled = false;
-            Shares_expirationdate.Enabled = false;
-        }
-
+        
+        // Нажатие кнопки на странице скидок
         private void Discounts_accept_button_Click(object sender, EventArgs e)
         {
-            // Добавление в базу данных
             try
             {
+                // В зависимости от текущего установленного режима выбирается действие
                 switch (Discounts_mode.SelectedIndex)
                 {
                     case (int)CRUDMode.Добавление:
@@ -298,12 +207,15 @@ namespace BeautySaloon
                         break;
                 }
             }
+            // Если возникла ошибка - вывести её в окошке
             catch (Exception ex)
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
+            // Очистка полей страницы в форме
             Discounts_Update();
         }
+        // Смена режима на странице скидок
         private void Discounts_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             var box = sender as ComboBox;
@@ -320,44 +232,13 @@ namespace BeautySaloon
                     break;
             }
         }
-        private void Discounts_Update()
-        {
-            this.discountsTableAdapter.Fill(this.beauty_saloonDataSet.discounts);
-            Discounts_discountID.Clear();
-            Discounts_shareID.Clear();
-            Discounts_serviceID.Clear();
-            Discounts_value.Clear();
-        }
-        private void Discounts_AddMode()
-        {
-            Discounts_accept_button.Text = ButtonType.Добавить.ToString();
-            Discounts_discountID.Enabled = false;
-            Discounts_shareID.Enabled = true;
-            Discounts_serviceID.Enabled = true;
-            Discounts_value.Enabled = true;
-        }
-        private void Discounts_ChangeMode()
-        {
-            Discounts_accept_button.Text = ButtonType.Изменить.ToString();
-            Discounts_discountID.Enabled = true;
-            Discounts_shareID.Enabled = true;
-            Discounts_serviceID.Enabled = true;
-            Discounts_value.Enabled = true;
-        }
-        private void Discounts_RemoveMode()
-        {
-            Discounts_accept_button.Text = ButtonType.Удалить.ToString();
-            Discounts_discountID.Enabled = true;
-            Discounts_shareID.Enabled = false;
-            Discounts_serviceID.Enabled = false;
-            Discounts_value.Enabled = false;
-        }
-
+        
+        // Нажатие кнопки на странице услуг
         private void Services_accept_button_Click(object sender, EventArgs e)
         {
-            // Добавление в базу данных
             try
             {
+                // В зависимости от текущего установленного режима выбирается действие
                 switch (Services_mode.SelectedIndex)
                 {
                     case (int)CRUDMode.Добавление:
@@ -376,12 +257,15 @@ namespace BeautySaloon
                         break;
                 }
             }
+            // Если возникла ошибка - вывести её в окошке
             catch (Exception ex)
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
+            // Очистка полей страницы в форме
             Services_Update();
         }
+        // Смена режима на странице услуг
         private void Services_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             var box = sender as ComboBox;
@@ -398,44 +282,13 @@ namespace BeautySaloon
                     break;
             }
         }
-        private void Services_Update()
-        {
-            this.servicesTableAdapter.Fill(this.beauty_saloonDataSet.services);
-            Services_serviceID.Clear();
-            Services_name.Clear();
-            Services_price.Clear();
-            Services_comment.Clear();
-        }
-        private void Services_AddMode()
-        {
-            Services_accept_button.Text = ButtonType.Добавить.ToString();
-            Services_serviceID.Enabled = false;
-            Services_name.Enabled = true;
-            Services_price.Enabled = true;
-            Services_comment.Enabled = true;
-        }
-        private void Services_ChangeMode()
-        {
-            Services_accept_button.Text = ButtonType.Изменить.ToString();
-            Services_serviceID.Enabled = true;
-            Services_name.Enabled = true;
-            Services_price.Enabled = true;
-            Services_comment.Enabled = true;
-        }
-        private void Services_RemoveMode()
-        {
-            Services_accept_button.Text = ButtonType.Удалить.ToString();
-            Services_serviceID.Enabled = true;
-            Services_name.Enabled = false;
-            Services_price.Enabled = false;
-            Services_comment.Enabled = false;
-        }
-
+        
+        // Нажатие кнопки на странице сотрудников
         private void Employees_accept_button_Click(object sender, EventArgs e)
         {
-            // Добавление в базу данных
             try
             {
+                // В зависимости от текущего установленного режима выбирается действие
                 switch (Employees_mode.SelectedIndex)
                 {
                     case (int)CRUDMode.Добавление:
@@ -456,12 +309,15 @@ namespace BeautySaloon
                         break;
                 }
             }
+            // Если возникла ошибка - вывести её в окошке
             catch (Exception ex)
             {
                 MessageBox.Show(string.Concat("Во время опрации возникла ошибка:\n", ex.ToString()));
             }
+            // Очистка полей страницы в форме
             Employees_Update();
         }
+        // Смена режима на странице сотрудников
         private void Employees_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             var box = sender as ComboBox;
@@ -477,54 +333,6 @@ namespace BeautySaloon
                     Employees_RemoveMode();
                     break;
             }
-        }
-        private void Employees_Update()
-        {
-            this.employeesTableAdapter.Fill(this.beauty_saloonDataSet.employees);
-            Employees_employeeID.Clear();
-            Employees_surname.Clear();
-            Employees_name.Clear();
-            Employees_lastname.Clear();
-            Employees_number.Clear();
-            Employees_address.Clear();
-            Employees_specialization.Clear();
-            Employees_startdate.ResetText();
-        }
-        private void Employees_AddMode()
-        {
-            Employees_accept_button.Text = ButtonType.Добавить.ToString();
-            Employees_employeeID.Enabled = false;
-            Employees_surname.Enabled = true;
-            Employees_name.Enabled = true;
-            Employees_lastname.Enabled = true;
-            Employees_number.Enabled = true;
-            Employees_address.Enabled = true;
-            Employees_specialization.Enabled = true;
-            Employees_startdate.Enabled = true;
-        }
-        private void Employees_ChangeMode()
-        {
-            Employees_accept_button.Text = ButtonType.Изменить.ToString();
-            Employees_employeeID.Enabled = true;
-            Employees_surname.Enabled = true;
-            Employees_name.Enabled = true;
-            Employees_lastname.Enabled = true;
-            Employees_number.Enabled = true;
-            Employees_address.Enabled = true;
-            Employees_specialization.Enabled = true;
-            Employees_startdate.Enabled = true;
-        }
-        private void Employees_RemoveMode()
-        {
-            Employees_accept_button.Text = ButtonType.Удалить.ToString();
-            Employees_employeeID.Enabled = true;
-            Employees_surname.Enabled = false;
-            Employees_name.Enabled = false;
-            Employees_lastname.Enabled = false;
-            Employees_number.Enabled = false;
-            Employees_address.Enabled = false;
-            Employees_specialization.Enabled = false;
-            Employees_startdate.Enabled = false;
         }
     }
 }

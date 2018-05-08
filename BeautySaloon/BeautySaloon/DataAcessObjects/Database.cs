@@ -6,7 +6,7 @@ namespace BeautySaloon.DataAcessObjects
 {
     class Database
     {
-        public readonly static SqlConnection Connection
+        public  static SqlConnection Connection
             = new SqlConnection("Data Source=DESKTOP-JE4MHQF;Initial Catalog=beauty_saloon;Integrated Security=True");
 
         public static void Connect()

@@ -226,7 +226,7 @@
             this.Employees.Controls.Add(this.Employees_surname_label);
             this.Employees.Location = new System.Drawing.Point(4, 29);
             this.Employees.Name = "Employees";
-            this.Employees.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Employees.Padding = new System.Windows.Forms.Padding(3);
             this.Employees.Size = new System.Drawing.Size(974, 720);
             this.Employees.TabIndex = 0;
             this.Employees.Text = "Сотрудники";
@@ -379,8 +379,10 @@
             // Employees_startdate
             // 
             this.Employees_startdate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Employees_startdate.CustomFormat = "";
             this.Employees_startdate.Location = new System.Drawing.Point(633, 252);
             this.Employees_startdate.Name = "Employees_startdate";
+            this.Employees_startdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Employees_startdate.Size = new System.Drawing.Size(332, 27);
             this.Employees_startdate.TabIndex = 8;
             // 
@@ -518,7 +520,7 @@
             this.Services.Controls.Add(this.Services_name_label);
             this.Services.Location = new System.Drawing.Point(4, 29);
             this.Services.Name = "Services";
-            this.Services.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Services.Padding = new System.Windows.Forms.Padding(3);
             this.Services.Size = new System.Drawing.Size(974, 720);
             this.Services.TabIndex = 1;
             this.Services.Text = "Услуги";
@@ -702,7 +704,7 @@
             this.Clients.Controls.Add(this.Clients_surname_label);
             this.Clients.Location = new System.Drawing.Point(4, 29);
             this.Clients.Name = "Clients";
-            this.Clients.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Clients.Padding = new System.Windows.Forms.Padding(3);
             this.Clients.Size = new System.Drawing.Size(974, 720);
             this.Clients.TabIndex = 2;
             this.Clients.Text = "Клиенты";
@@ -890,7 +892,7 @@
             this.Records.Controls.Add(this.Records_clientID_label);
             this.Records.Location = new System.Drawing.Point(4, 29);
             this.Records.Name = "Records";
-            this.Records.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Records.Padding = new System.Windows.Forms.Padding(3);
             this.Records.Size = new System.Drawing.Size(974, 720);
             this.Records.TabIndex = 3;
             this.Records.Text = "Записи";
@@ -939,6 +941,8 @@
             // Records_datetime
             // 
             this.Records_datetime.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Records_datetime.CustomFormat = "MM/dd/yyyy hh:mm";
+            this.Records_datetime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Records_datetime.Location = new System.Drawing.Point(633, 147);
             this.Records_datetime.Name = "Records_datetime";
             this.Records_datetime.Size = new System.Drawing.Size(332, 27);
@@ -1133,7 +1137,7 @@
             this.Shares.Controls.Add(this.Shares_name_label);
             this.Shares.Location = new System.Drawing.Point(4, 29);
             this.Shares.Name = "Shares";
-            this.Shares.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Shares.Padding = new System.Windows.Forms.Padding(3);
             this.Shares.Size = new System.Drawing.Size(974, 720);
             this.Shares.TabIndex = 4;
             this.Shares.Text = "Акции";
@@ -1182,6 +1186,7 @@
             // Shares_expirationdate
             // 
             this.Shares_expirationdate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Shares_expirationdate.CustomFormat = "";
             this.Shares_expirationdate.Location = new System.Drawing.Point(633, 112);
             this.Shares_expirationdate.Name = "Shares_expirationdate";
             this.Shares_expirationdate.Size = new System.Drawing.Size(332, 27);
@@ -1190,6 +1195,7 @@
             // Shares_startdate
             // 
             this.Shares_startdate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Shares_startdate.CustomFormat = "";
             this.Shares_startdate.Location = new System.Drawing.Point(633, 77);
             this.Shares_startdate.Name = "Shares_startdate";
             this.Shares_startdate.Size = new System.Drawing.Size(332, 27);
@@ -1316,7 +1322,7 @@
             this.Discounts.Controls.Add(this.Discounts_shareID_label);
             this.Discounts.Location = new System.Drawing.Point(4, 29);
             this.Discounts.Name = "Discounts";
-            this.Discounts.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Discounts.Padding = new System.Windows.Forms.Padding(3);
             this.Discounts.Size = new System.Drawing.Size(974, 720);
             this.Discounts.TabIndex = 5;
             this.Discounts.Text = "Скидки";

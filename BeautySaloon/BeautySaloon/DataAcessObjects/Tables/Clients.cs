@@ -2,20 +2,26 @@
 {
     static class Clients
     {
+        // Шаблон команды для добавления записи
         const string InsertClientCommand = "INSERT INTO \"clients\"" +
             "(\"surname\", \"name\", \"phone_number\")" +
             " VALUES (@1, @2, @3)";
 
+        // Шаблон команды для изменения записи
         const string UpdateClientCommand = "UPDATE \"clients\"" +
             " SET \"surname\" = @2, \"name\" = @3, \"phone_number\" = @4" +
             " WHERE \"clientID\" = @1";
 
+        // Шаблон команды для удаления записи
         const string DeleteClientCommand = "DELETE FROM \"clients\"" +
             " WHERE \"clientID\" = @1";
 
+        // Метод для добавления в БД
         public static void Insert(string surname, string name, string phone_number)
         {
+            // Подключение к БД
             Database.Connect();
+            // Составление команды с помощью соотвутствующей строки
             using (var cmd = Database.Connection.CreateCommand())
             {
                 cmd.CommandText = InsertClientCommand;
@@ -24,6 +30,7 @@
                 cmd.Parameters.AddWithValue("3", phone_number);
                 cmd.ExecuteNonQuery();
             }
+            // Закрытие подключения
             Database.Disconnect();
         }
 
