@@ -1,5 +1,5 @@
-﻿# BeautySaloon
-MSSQLServer database with database management system on .NET windows forms
+﻿# BeautySaloon - Салон красоты
+MSSQLServer database with database management system on .NET windows forms.
 
 # Необходимо для запуска
 MS SQL Server
